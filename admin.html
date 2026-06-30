@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Booking Dashboard | Haneeya HMUA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700&family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#FFFFFF; --ivory:#F8F6F2; --cream:#F2EDE6;
+  --rose-gold:#C9907A; --gold:#C4A882;
+  --emerald:#1F5C4D; --emerald-dark:#143F35; --emerald-light:#2F7A66;
+  --charcoal:#2C2C2C; --charcoal-mid:#4A4A4A; --charcoal-light:#6B6B6B;
+  --border:rgba(196,168,130,0.25);
+  --shadow-soft:0 4px 24px rgba(44,44,44,0.06);
+  --shadow-mid:0 8px 40px rgba(44,44,44,0.10);
+  --radius-sm:8px; --radius-md:16px; --radius-lg:24px;
+  --green:#1F5C4D; --rose:#B5483A; --amber:#B07868;
+}
+body{font-family:'Inter',sans-serif;background:var(--ivory);color:var(--charcoal);min-height:100vh}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600}
+
+/* LOGIN SCREEN */
+.login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#143F35,#1F5C4D 60%,#2C1F1A)}
+.login-card{background:var(--white);border-radius:var(--radius-lg);padding:2.75rem;max-width:380px;width:92%;box-shadow:0 20px 70px rgba(0,0,0,0.3);text-align:center}
+.login-mark{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--rose-gold),var(--emerald));display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;margin:0 auto 1.25rem}
+.login-card h2{margin-bottom:0.4rem;font-size:1.5rem}
+.login-card p{color:var(--charcoal-light);font-size:0.88rem;margin-bottom:1.75rem}
+.login-input{width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:0.95rem;margin-bottom:1rem;outline:none;transition:border-color 0.3s}
+.login-input:focus{border-color:var(--rose-gold)}
+.login-btn{width:100%;padding:0.9rem;background:linear-gradient(135deg,var(--rose-gold),var(--gold));color:white;border:none;border-radius:100px;font-family:'Poppins',sans-serif;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.3s}
+.login-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,144,122,0.4)}
+.login-error{color:var(--rose);font-size:0.82rem;margin-top:0.75rem;display:none}
+.login-hint{margin-top:1.5rem;font-size:0.76rem;color:var(--charcoal-light);background:var(--ivory);padding:0.75rem;border-radius:var(--radius-sm)}
+
+/* DASHBOARD */
+.dash{display:none}
+.dash.show{display:block}
+.topbar{background:linear-gradient(135deg,#143F35,#1F5C4D);padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.topbar-brand{display:flex;align-items:center;gap:0.75rem}
+.topbar-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--rose-gold),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-weight:600}
+.topbar-brand h1{color:white;font-size:1.25rem}
+.topbar-brand span{color:rgba(255,255,255,0.6);font-size:0.78rem;display:block}
+.topbar-actions{display:flex;gap:0.75rem}
+.tb-btn{display:flex;align-items:center;gap:0.4rem;padding:0.55rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:500;text-decoration:none;cursor:pointer;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.08);color:white;transition:all 0.3s}
+.tb-btn:hover{background:rgba(255,255,255,0.18)}
+
+.dash-container{max-width:1200px;margin:0 auto;padding:2rem}
+
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem}
+.stat-card{background:white;border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;box-shadow:var(--shadow-soft)}
+.stat-card .num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--emerald);line-height:1}
+.stat-card .label{font-size:0.78rem;color:var(--charcoal-light);margin-top:0.4rem}
+.stat-card.rose .num{color:var(--rose-gold)}
+
+.controls-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;gap:1rem;flex-wrap:wrap}
+.search-box{position:relative;flex-grow:1;max-width:340px}
+.search-box input{width:100%;padding:0.65rem 1rem 0.65rem 2.4rem;border:1.5px solid var(--border);border-radius:100px;font-size:0.86rem;outline:none}
+.search-box input:focus{border-color:var(--rose-gold)}
+.search-box i{position:absolute;left:0.85rem;top:50%;transform:translateY(-50%);color:var(--charcoal-light)}
+.filter-pills{display:flex;gap:0.5rem;flex-wrap:wrap}
+.pill{padding:0.45rem 1rem;border-radius:100px;border:1px solid var(--border);background:white;font-size:0.78rem;cursor:pointer;transition:all 0.3s;color:var(--charcoal-mid)}
+.pill.active{background:linear-gradient(135deg,var(--rose-gold),var(--emerald));color:white;border-color:transparent}
+
+.bookings-table-wrap{background:white;border-radius:var(--radius-md);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow-soft)}
+table{width:100%;border-collapse:collapse}
+thead th{text-align:left;padding:0.9rem 1.1rem;background:var(--ivory);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--charcoal-light);font-weight:600;border-bottom:1px solid var(--border)}
+tbody td{padding:1rem 1.1rem;border-bottom:1px solid var(--border);font-size:0.86rem;vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:rgba(201,144,122,0.03)}
+.cell-name{font-weight:600;color:var(--charcoal)}
+.cell-sub{font-size:0.76rem;color:var(--charcoal-light);margin-top:0.15rem}
+.badge{display:inline-block;padding:0.25rem 0.7rem;border-radius:100px;font-size:0.7rem;font-weight:600}
+.badge.pending{background:rgba(201,144,122,0.15);color:var(--amber)}
+.badge.confirmed{background:rgba(31,92,77,0.12);color:var(--emerald)}
+.badge.cancelled{background:rgba(181,72,58,0.12);color:var(--rose)}
+.status-select{font-size:0.76rem;padding:0.3rem 0.5rem;border-radius:6px;border:1px solid var(--border);background:white;cursor:pointer}
+.row-actions{display:flex;gap:0.4rem}
+.icon-btn{width:30px;height:30px;border-radius:8px;border:1px solid var(--border);background:white;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--charcoal-mid);transition:all 0.3s}
+.icon-btn:hover{border-color:var(--rose-gold);color:var(--rose-gold)}
+.icon-btn.danger:hover{border-color:var(--rose);color:var(--rose)}
+.empty-state{text-align:center;padding:4rem 2rem;color:var(--charcoal-light)}
+.empty-state i{opacity:0.3;margin-bottom:1rem}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(20,30,28,0.6);z-index:2000;align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.show{display:flex}
+.modal-card{background:white;border-radius:var(--radius-lg);max-width:480px;width:100%;max-height:85vh;overflow-y:auto;padding:2rem;box-shadow:var(--shadow-mid)}
+.modal-card h3{margin-bottom:1.25rem;display:flex;justify-content:space-between;align-items:center}
+.modal-card h3 button{background:none;border:none;cursor:pointer;color:var(--charcoal-light)}
+.detail-row{display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.86rem}
+.detail-row strong{color:var(--charcoal-light);font-weight:500;font-size:0.78rem}
+.detail-row span{color:var(--charcoal);text-align:right;max-width:60%}
+
+@media (max-width:900px){
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .bookings-table-wrap{overflow-x:auto}
+  table{min-width:760px}
+  .controls-row{flex-direction:column;align-items:stretch}
+  .search-box{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-wrap" id="loginWrap">
+  <div class="login-card">
+    <div class="login-mark">H</div>
+    <h2>Haneeya Dashboard</h2>
+    <p>Sign in to view and manage your bookings.</p>
+    <input type="password" class="login-input" id="passInput" placeholder="Enter access code" />
+    <button class="login-btn" onclick="tryLogin()">Sign In</button>
+    <p class="login-error" id="loginError">Incorrect access code. Please try again.</p>
+    <div class="login-hint">Default access code: <strong>haneeya2025</strong><br/>Change this in the page source before sharing the dashboard link.</div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dash" id="dash">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <div class="topbar-mark">H</div>
+      <div><h1>Booking Dashboard</h1><span>Haneeya &middot; HMUA Official</span></div>
+    </div>
+    <div class="topbar-actions">
+      <a href="index.html" class="tb-btn"><i data-lucide="home" width="14" height="14"></i> Back to Website</a>
+      <button class="tb-btn" onclick="exportCSV()"><i data-lucide="download" width="14" height="14"></i> Export CSV</button>
+      <button class="tb-btn" onclick="logout()"><i data-lucide="log-out" width="14" height="14"></i> Log Out</button>
+    </div>
+  </div>
+
+  <div class="dash-container">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num" id="statTotal">0</div><div class="label">Total Bookings</div></div>
+      <div class="stat-card rose"><div class="num" id="statPending">0</div><div class="label">Pending Confirmation</div></div>
+      <div class="stat-card"><div class="num" id="statConfirmed">0</div><div class="label">Confirmed</div></div>
+      <div class="stat-card"><div class="num" id="statMonth">0</div><div class="label">This Month</div></div>
+    </div>
+
+    <div class="controls-row">
+      <div class="search-box">
+        <i data-lucide="search" width="15" height="15"></i>
+        <input type="text" id="searchInput" placeholder="Search by name, phone, or booking ID..." oninput="renderTable()" />
+      </div>
+      <div class="filter-pills">
+        <button class="pill active" data-status="all" onclick="setFilter('all', this)">All</button>
+        <button class="pill" data-status="Pending Confirmation" onclick="setFilter('Pending Confirmation', this)">Pending</button>
+        <button class="pill" data-status="Confirmed" onclick="setFilter('Confirmed', this)">Confirmed</button>
+        <button class="pill" data-status="Cancelled" onclick="setFilter('Cancelled', this)">Cancelled</button>
+      </div>
+    </div>
+
+    <div class="bookings-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Booking ID</th>
+            <th>Client</th>
+            <th>Event</th>
+            <th>Date &amp; Time</th>
+            <th>Area</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="bookingsTbody"></tbody>
+      </table>
+      <div class="empty-state" id="emptyState" style="display:none">
+        <i data-lucide="calendar-x" width="40" height="40"></i>
+        <p>No bookings found yet. Bookings made on the website will appear here automatically.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DETAIL MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this) closeModal()">
+  <div class="modal-card" id="modalCard"></div>
+</div>
+
+<script>
+lucide.createIcons();
+
+const ACCESS_CODE = 'haneeya2025';
+const STORAGE_KEY = 'brixcode_haneeya_bookings';
+const SESSION_KEY = 'brixcode_haneeya_admin_session';
+
+function tryLogin(){
+  const val = document.getElementById('passInput').value;
+  if (val === ACCESS_CODE) {
+    sessionStorage.setItem(SESSION_KEY, 'true');
+    showDashboard();
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+  }
+}
+document.getElementById('passInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') tryLogin(); });
+
+function logout(){
+  sessionStorage.removeItem(SESSION_KEY);
+  document.getElementById('dash').classList.remove('show');
+  document.getElementById('loginWrap').style.display = 'flex';
+}
+
+function showDashboard(){
+  document.getElementById('loginWrap').style.display = 'none';
+  document.getElementById('dash').classList.add('show');
+  renderAll();
+}
+
+if (sessionStorage.getItem(SESSION_KEY) === 'true') showDashboard();
+
+function getBookings(){
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+  catch(e){ return []; }
+}
+function saveBookings(list){ localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); }
+
+let currentFilter = 'all';
+function setFilter(status, btn){
+  currentFilter = status;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  renderTable();
+}
+
+function renderAll(){
+  renderStats();
+  renderTable();
+}
+
+function renderStats(){
+  const bookings = getBookings();
+  const now = new Date();
+  document.getElementById('statTotal').textContent = bookings.length;
+  document.getElementById('statPending').textContent = bookings.filter(b => b.status === 'Pending Confirmation').length;
+  document.getElementById('statConfirmed').textContent = bookings.filter(b => b.status === 'Confirmed').length;
+  document.getElementById('statMonth').textContent = bookings.filter(b => {
+    const d = new Date(b.date);
+    return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+  }).length;
+}
+
+function badgeClass(status){
+  if (status === 'Confirmed') return 'confirmed';
+  if (status === 'Cancelled') return 'cancelled';
+  return 'pending';
+}
+
+function renderTable(){
+  const bookings = getBookings().slice().sort((a,b) => new Date(a.date) - new Date(b.date));
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const tbody = document.getElementById('bookingsTbody');
+  const empty = document.getElementById('emptyState');
+
+  let filtered = bookings.filter(b => {
+    const matchesFilter = currentFilter === 'all' || b.status === currentFilter;
+    const matchesSearch = !search ||
+      b.name.toLowerCase().includes(search) ||
+      b.phone.toLowerCase().includes(search) ||
+      b.id.toLowerCase().includes(search);
+    return matchesFilter && matchesSearch;
+  });
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  tbody.innerHTML = filtered.map(b => `
+    <tr>
+      <td><strong>${b.id}</strong></td>
+      <td>
+        <div class="cell-name">${escapeHtml(b.name)}</div>
+        <div class="cell-sub">${escapeHtml(b.phone)}</div>
+      </td>
+      <td>
+        <div>${escapeHtml(b.eventType || '—')}</div>
+        <div class="cell-sub">${escapeHtml(b.package || 'No package selected')}</div>
+      </td>
+      <td>
+        <div>${formatDate(b.date)}</div>
+        <div class="cell-sub">${escapeHtml(b.time || '—')}</div>
+      </td>
+      <td>${escapeHtml(b.area || '—')}</td>
+      <td>
+        <select class="status-select" onchange="updateStatus('${b.id}', this.value)">
+          <option value="Pending Confirmation" ${b.status === 'Pending Confirmation' ? 'selected' : ''}>Pending</option>
+          <option value="Confirmed" ${b.status === 'Confirmed' ? 'selected' : ''}>Confirmed</option>
+          <option value="Cancelled" ${b.status === 'Cancelled' ? 'selected' : ''}>Cancelled</option>
+        </select>
+      </td>
+      <td>
+        <div class="row-actions">
+          <button class="icon-btn" onclick="viewDetail('${b.id}')" title="View details"><i data-lucide="eye" width="14" height="14"></i></button>
+          <button class="icon-btn danger" onclick="deleteBooking('${b.id}')" title="Delete booking"><i data-lucide="trash-2" width="14" height="14"></i></button>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+  lucide.createIcons();
+}
+
+function escapeHtml(str){
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+function formatDate(dateStr){
+  if (!dateStr) return '—';
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function updateStatus(id, newStatus){
+  const bookings = getBookings();
+  const idx = bookings.findIndex(b => b.id === id);
+  if (idx > -1) { bookings[idx].status = newStatus; saveBookings(bookings); renderStats(); }
+}
+
+function deleteBooking(id){
+  if (!confirm(`Delete booking ${id}? This cannot be undone.`)) return;
+  let bookings = getBookings();
+  bookings = bookings.filter(b => b.id !== id);
+  saveBookings(bookings);
+  renderAll();
+}
+
+function viewDetail(id){
+  const b = getBookings().find(x => x.id === id);
+  if (!b) return;
+  const modal = document.getElementById('modalCard');
+  modal.innerHTML = `
+    <h3>${b.id} <button onclick="closeModal()"><i data-lucide="x" width="18" height="18"></i></button></h3>
+    <div class="detail-row"><strong>STATUS</strong><span><span class="badge ${badgeClass(b.status)}">${b.status}</span></span></div>
+    <div class="detail-row"><strong>FULL NAME</strong><span>${escapeHtml(b.name)}</span></div>
+    <div class="detail-row"><strong>PHONE</strong><span>${escapeHtml(b.phone)}</span></div>
+    <div class="detail-row"><strong>FACEBOOK</strong><span>${escapeHtml(b.facebook) || '—'}</span></div>
+    <div class="detail-row"><strong>INSTAGRAM</strong><span>${escapeHtml(b.instagram) || '—'}</span></div>
+    <div class="detail-row"><strong>EVENT TYPE</strong><span>${escapeHtml(b.eventType)}</span></div>
+    <div class="detail-row"><strong>PACKAGE</strong><span>${escapeHtml(b.package) || '—'}</span></div>
+    <div class="detail-row"><strong>DATE</strong><span>${formatDate(b.date)}</span></div>
+    <div class="detail-row"><strong>TIME</strong><span>${escapeHtml(b.time)}</span></div>
+    <div class="detail-row"><strong>AREA</strong><span>${escapeHtml(b.area)}</span></div>
+    <div class="detail-row"><strong>VENUE</strong><span>${escapeHtml(b.venue) || '—'}</span></div>
+    <div class="detail-row"><strong>ADD-ONS</strong><span>${(b.addons && b.addons.length) ? b.addons.map(escapeHtml).join(', ') : 'None'}</span></div>
+    <div class="detail-row"><strong>MESSAGE</strong><span>${escapeHtml(b.message) || '—'}</span></div>
+    <div class="detail-row"><strong>SUBMITTED</strong><span>${new Date(b.submittedAt).toLocaleString()}</span></div>
+  `;
+  document.getElementById('modalOverlay').classList.add('show');
+  lucide.createIcons();
+}
+function closeModal(){ document.getElementById('modalOverlay').classList.remove('show'); }
+
+function exportCSV(){
+  const bookings = getBookings();
+  if (bookings.length === 0) { alert('No bookings to export yet.'); return; }
+  const headers = ['Booking ID','Name','Phone','Facebook','Instagram','Event Type','Package','Date','Time','Area','Venue','Add-ons','Message','Status','Submitted At'];
+  const rows = bookings.map(b => [
+    b.id, b.name, b.phone, b.facebook, b.instagram, b.eventType, b.package,
+    b.date, b.time, b.area, b.venue, (b.addons||[]).join('; '), b.message, b.status, b.submittedAt
+  ]);
+  const csv = [headers, ...rows].map(r => r.map(c => `"${String(c||'').replace(/"/g,'""')}"`).join(',')).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `haneeya-bookings-${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
