@@ -1009,6 +1009,7 @@ p{color:var(--charcoal-mid);font-size:1rem}
   </button>
 </div>
 
+
 <script>
 lucide.createIcons();
 
@@ -1061,6 +1062,16 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 const STORAGE_KEY = 'brixcode_haneeya_bookings';
 const BLOCKED_KEY = 'brixcode_haneeya_blocked_dates';
 
+// Each slot is ~3 hours wide so a single booking only occupies its own slot,
+// not the whole day. A day is only fully "booked" once every slot is taken.
+const TIME_SLOTS = ['early-morning', 'morning', 'afternoon', 'evening'];
+const SLOT_LABELS = {
+  'early-morning': 'Early Morning (5:00 AM – 8:00 AM)',
+  'morning': 'Morning (8:00 AM – 11:00 AM)',
+  'afternoon': 'Afternoon (1:00 PM – 4:00 PM)',
+  'evening': 'Evening (5:00 PM – 8:00 PM)'
+};
+
 function getBookings(){
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
   catch(e){ return []; }
@@ -1078,7 +1089,12 @@ function nextBookingId(){
   return `HN-${year}-${num}`;
 }
 
-/* Calendar rendering */
+function getTakenSlotsForDate(dateStr){
+  const bookings = getBookings().filter(b => b.date === dateStr && b.status !== 'Cancelled');
+  return new Set(bookings.map(b => b.timeSlot));
+}
+
+/* Calendar rendering — date is "fully booked" only when ALL slots are taken */
 let calDate = new Date();
 function renderCalendar(){
   const grid = document.getElementById('calendarGrid');
@@ -1091,11 +1107,7 @@ function renderCalendar(){
   const firstDay = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const today = new Date(); today.setHours(0,0,0,0);
-
-  const bookings = getBookings();
-  const blocked = getBlockedDates();
-  const bookedDates = new Set(bookings.map(b => b.date));
-  const blockedDates = new Set(blocked);
+  const blockedDates = new Set(getBlockedDates());
 
   grid.innerHTML = '';
   for (let i = 0; i < firstDay; i++) {
@@ -1106,16 +1118,20 @@ function renderCalendar(){
     const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
     const isPast = dateObj < today;
     const isToday = dateObj.getTime() === today.getTime();
+    const takenSlots = getTakenSlotsForDate(dateStr);
+    const fullyBooked = takenSlots.size >= TIME_SLOTS.length || blockedDates.has(dateStr);
+
     let classes = 'cal-day';
     if (!isPast) classes += ' active';
     if (isToday) classes += ' today';
 
-    if (bookedDates.has(dateStr) || blockedDates.has(dateStr)) {
+    if (fullyBooked) {
       classes += ' booked';
-      grid.innerHTML += `<div class="${classes}" title="Already booked">${d}</div>`;
+      grid.innerHTML += `<div class="${classes}" title="Fully booked">${d}</div>`;
     } else if (!isPast) {
       classes += ' vacant';
-      grid.innerHTML += `<div class="${classes}" title="Vacant - click to select" onclick="selectCalDate('${dateStr}')">${d}</div>`;
+      const remaining = TIME_SLOTS.length - takenSlots.size;
+      grid.innerHTML += `<div class="${classes}" title="${remaining} slot(s) open" onclick="selectCalDate('${dateStr}')">${d}</div>`;
     } else {
       grid.innerHTML += `<div class="${classes}">${d}</div>`;
     }
@@ -1128,21 +1144,73 @@ function changeMonth(delta){
 function selectCalDate(dateStr){
   document.getElementById('f-date').value = dateStr;
   document.getElementById('bookingFormCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  checkSlotAvailability();
 }
 renderCalendar();
 
-/* Booking form submit */
+/* Live slot availability check as the user fills the form */
+function checkSlotAvailability(){
+  const dateVal = document.getElementById('f-date').value;
+  const timeSel = document.getElementById('f-time');
+  const statusEl = document.getElementById('slotStatus');
+  if (!dateVal) { statusEl.textContent = ''; return; }
+
+  const taken = getTakenSlotsForDate(dateVal);
+  Array.from(timeSel.options).forEach(opt => {
+    if (!opt.value) return;
+    opt.disabled = taken.has(opt.value);
+    opt.textContent = taken.has(opt.value) ? `${SLOT_LABELS[opt.value]} — Already booked` : SLOT_LABELS[opt.value];
+  });
+
+  if (taken.size >= TIME_SLOTS.length) {
+    statusEl.textContent = 'This date is fully booked. Please choose another date.';
+    statusEl.style.color = '#B5483A';
+  } else {
+    statusEl.textContent = `${TIME_SLOTS.length - taken.size} of ${TIME_SLOTS.length} time slots open on this date.`;
+    statusEl.style.color = '';
+  }
+}
+
+/* Booking form submit — explicit validation, visible inline errors (no alert()) */
 const appointmentForm = document.getElementById('appointmentForm');
+const formErrorEl = document.getElementById('formError');
+
+function showFormError(msg){
+  formErrorEl.textContent = msg;
+  formErrorEl.style.display = 'block';
+  formErrorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function clearFormError(){
+  formErrorEl.style.display = 'none';
+  formErrorEl.textContent = '';
+}
+
 if (appointmentForm) {
   appointmentForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const terms = document.getElementById('termsCheck');
-    if (!terms.checked) { alert('Please agree to the booking terms to proceed.'); return; }
+    clearFormError();
 
+    const name = document.getElementById('f-name').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    const eventType = document.getElementById('f-event').value;
     const dateVal = document.getElementById('f-date').value;
-    const bookings = getBookings();
-    if (bookings.some(b => b.date === dateVal)) {
-      alert('Sorry, that date is already booked. Please choose a vacant date from the calendar.');
+    const timeSlot = document.getElementById('f-time').value;
+    const area = document.getElementById('f-area').value;
+    const terms = document.getElementById('termsCheck');
+
+    if (!name || !phone || !eventType || !dateVal || !timeSlot || !area) {
+      showFormError('Please fill in all required fields marked with *.');
+      return;
+    }
+    if (!terms.checked) {
+      showFormError('Please agree to the Booking Terms and Cancellation Policy before submitting.');
+      return;
+    }
+
+    const taken = getTakenSlotsForDate(dateVal);
+    if (taken.has(timeSlot)) {
+      showFormError('That time slot was just taken. Please pick another slot or date.');
+      checkSlotAvailability();
       return;
     }
 
@@ -1151,15 +1219,16 @@ if (appointmentForm) {
 
     const newBooking = {
       id: bookingId,
-      name: document.getElementById('f-name').value,
-      phone: document.getElementById('f-phone').value,
+      name: name,
+      phone: phone,
       facebook: document.getElementById('f-fb').value,
       instagram: document.getElementById('f-ig').value,
-      eventType: document.getElementById('f-event').value,
+      eventType: eventType,
       package: document.getElementById('f-package').value,
       date: dateVal,
-      time: document.getElementById('f-time').value,
-      area: document.getElementById('f-area').value,
+      timeSlot: timeSlot,
+      time: SLOT_LABELS[timeSlot],
+      area: area,
       venue: document.getElementById('f-venue').value,
       addons: addons,
       message: document.getElementById('f-message').value,
@@ -1167,6 +1236,7 @@ if (appointmentForm) {
       submittedAt: new Date().toISOString()
     };
 
+    const bookings = getBookings();
     bookings.push(newBooking);
     saveBookings(bookings);
 
@@ -1179,10 +1249,65 @@ if (appointmentForm) {
 }
 
 function resetBooking(){
+  clearFormError();
   document.getElementById('bookingFormCard').style.display = 'block';
   document.getElementById('bookingSuccess').classList.remove('show');
   document.getElementById('appointmentForm').reset();
+  checkSlotAvailability();
+}
+
+/* Legal modal content */
+const LEGAL_CONTENT = {
+  terms: {
+    title: 'Booking Terms',
+    body: `
+      <p>By submitting a booking request, you agree to the following terms with Haneeya (HMUA):</p>
+      <h4>Reservation</h4>
+      <p>A booking request is not confirmed until Haneeya replies via Facebook or Instagram to confirm your date, time slot, and package. Submitting this form reserves your request but does not guarantee the slot until confirmed.</p>
+      <h4>Reservation Fee</h4>
+      <p>A reservation fee may be required to lock in your date once confirmed. Details and payment instructions will be sent directly to you.</p>
+      <h4>Arrival &amp; Preparation</h4>
+      <ul>
+        <li>Please have a clean, makeup-free face ready at your scheduled time slot.</li>
+        <li>Inform Haneeya of any skin allergies, sensitivities, or special requests in advance.</li>
+        <li>For home service bookings, ensure a well-lit area with access to a chair and outlet.</li>
+      </ul>
+      <h4>Travel Fees</h4>
+      <p>Bookings outside Marawi City (Iligan, CDO, and surrounding municipalities) may include a travel fee, confirmed at the time of booking.</p>
+    `
+  },
+  cancellation: {
+    title: 'Cancellation Policy',
+    body: `
+      <p>We understand plans can change. Please review the following before booking:</p>
+      <h4>Rescheduling</h4>
+      <p>Date changes are accepted when requested at least 7 days before the event, subject to availability on the new date.</p>
+      <h4>Cancellations</h4>
+      <p>Cancellations made within 48 hours of the event date may forfeit any reservation fee already paid. Please message Haneeya directly on Facebook or Instagram as early as possible if you need to cancel.</p>
+      <h4>No-Shows</h4>
+      <p>If you are not available at your scheduled time slot without prior notice, the booking may be released to make room for other clients.</p>
+      <h4>Refunds</h4>
+      <p>Reservation fees are generally non-refundable but may be discussed on a case-by-case basis for emergencies. Please reach out directly to discuss your situation.</p>
+    `
+  }
+};
+
+function openLegalModal(type){
+  const content = LEGAL_CONTENT[type];
+  if (!content) return;
+  document.getElementById('legalModalCard').innerHTML = `
+    <h3>${content.title} <button onclick="closeLegalModal()"><i data-lucide="x" width="18" height="18"></i></button></h3>
+    ${content.body}
+    <button class="legal-modal-close-btn" onclick="closeLegalModal()">Close</button>
+  `;
+  document.getElementById('legalModalOverlay').classList.add('show');
+  lucide.createIcons();
+}
+function closeLegalModal(){
+  document.getElementById('legalModalOverlay').classList.remove('show');
 }
 </script>
+
 </body>
 </html>
+
