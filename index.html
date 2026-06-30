@@ -1,1517 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Haneeya Luxe Beauty | Luxury Makeup Artist Philippines</title>
-  <meta name="description" content="Professional makeup artist specializing in bridal, graduation, debut, and special occasion makeup across the Philippines. Book your appointment today." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Haneeya | HMUA - Bridal &amp; Hijab Makeup Artist, Mindanao</title>
+<meta name="description" content="Haneeya (HMUA) - Professional makeup artist specializing in bridal glam, hijab draping, engagement and prenup shoots. Based in Marawi City, Iligan, Cagayan de Oro, Lanao del Sur & Lanao del Norte." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#FFFFFF; --ivory:#F8F6F2; --cream:#F2EDE6;
+  --blush:#F0D5D0; --blush-mid:#E8C4BC;
+  --rose-gold:#C9907A; --rose-gold-dark:#B07868;
+  --emerald:#1F5C4D; --emerald-dark:#143F35; --emerald-light:#2F7A66;
+  --gold:#C4A882; --gold-dark:#A8926A;
+  --charcoal:#2C2C2C; --charcoal-mid:#4A4A4A; --charcoal-light:#6B6B6B;
+  --border:rgba(196,168,130,0.25);
+  --shadow-soft:0 4px 24px rgba(44,44,44,0.06);
+  --shadow-mid:0 8px 40px rgba(44,44,44,0.10);
+  --shadow-strong:0 16px 64px rgba(44,44,44,0.14);
+  --radius-sm:8px; --radius-md:16px; --radius-lg:24px; --radius-xl:32px;
+  --transition:0.35s cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--charcoal);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:500;line-height:1.2}
+h1{font-size:clamp(2.2rem,5vw,3.8rem)}
+h2{font-size:clamp(1.8rem,3.5vw,2.7rem)}
+h3{font-size:clamp(1.2rem,2vw,1.5rem)}
+p{color:var(--charcoal-mid);font-size:1rem}
+.section-label{font-family:'Poppins',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose-gold);display:block;margin-bottom:0.75rem}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;font-family:'Poppins',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.04em;border-radius:100px;padding:0.85rem 2rem;cursor:pointer;border:none;text-decoration:none;transition:all var(--transition);white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,var(--rose-gold),var(--gold));color:var(--white);box-shadow:0 4px 20px rgba(201,144,122,0.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,144,122,0.45)}
+.btn-outline{background:transparent;color:var(--charcoal);border:1.5px solid var(--border)}
+.btn-outline:hover{background:var(--ivory);border-color:var(--rose-gold);color:var(--rose-gold);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.5)}
+.btn-ghost:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.8)}
 
-    :root {
-      --white: #FFFFFF;
-      --ivory: #F8F6F2;
-      --cream: #F2EDE6;
-      --blush: #F0D5D0;
-      --blush-mid: #E8C4BC;
-      --rose-gold: #C9907A;
-      --rose-gold-dark: #B07868;
-      --gold: #C4A882;
-      --gold-dark: #A8926A;
-      --charcoal: #2C2C2C;
-      --charcoal-mid: #4A4A4A;
-      --charcoal-light: #6B6B6B;
-      --border: rgba(196,168,130,0.25);
-      --shadow-soft: 0 4px 24px rgba(44,44,44,0.06);
-      --shadow-mid: 0 8px 40px rgba(44,44,44,0.10);
-      --shadow-strong: 0 16px 64px rgba(44,44,44,0.14);
-      --radius-sm: 8px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --radius-xl: 32px;
-      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.25rem 0;transition:all var(--transition)}
+.navbar.scrolled{background:rgba(248,246,242,0.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 2px 24px rgba(44,44,44,0.07);padding:0.85rem 0}
+.nav-inner{max-width:1240px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
+.nav-logo-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--rose-gold),var(--emerald));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:white;font-size:1rem;font-weight:600}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--white);transition:color var(--transition);letter-spacing:0.02em}
+.navbar.scrolled .nav-logo-text{color:var(--charcoal)}
+.nav-logo-text small{display:block;font-family:'Poppins',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.18em;color:var(--rose-gold);text-transform:uppercase;margin-top:-2px}
+.nav-links{display:flex;align-items:center;gap:1.85rem;list-style:none}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.84rem;font-weight:500;color:rgba(255,255,255,0.88);text-decoration:none;transition:color var(--transition);letter-spacing:0.02em}
+.navbar.scrolled .nav-links a{color:var(--charcoal-mid)}
+.nav-links a:hover,.navbar.scrolled .nav-links a:hover{color:var(--rose-gold)}
+.nav-cta{font-family:'Poppins',sans-serif;font-size:0.8rem;font-weight:600;background:linear-gradient(135deg,var(--rose-gold),var(--gold));color:var(--white);padding:0.6rem 1.4rem;border-radius:100px;text-decoration:none;transition:all var(--transition);box-shadow:0 4px 16px rgba(201,144,122,0.3)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(201,144,122,0.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all var(--transition)}
+.navbar.scrolled .hamburger span{background:var(--charcoal)}
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--ivory);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--charcoal);text-decoration:none;transition:color var(--transition)}
+.mobile-menu a:hover{color:var(--rose-gold)}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:var(--charcoal)}
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(165deg,#143F35 0%,#1F5C4D 35%,#2C1F1A 75%,#1F5C4D 100%);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(201,144,122,0.18) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(196,168,130,0.12) 0%,transparent 50%)}
+.hero-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");opacity:0.4;pointer-events:none}
+.hero-inner{max-width:1240px;margin:0 auto;padding:8rem 2rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-content{max-width:560px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(201,144,122,0.12);border:1px solid rgba(201,144,122,0.3);border-radius:100px;padding:0.4rem 1rem;margin-bottom:1.75rem}
+.hero-eyebrow span{font-family:'Poppins',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--rose-gold)}
+.hero-eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--rose-gold)}
+.hero h1{color:var(--white);margin-bottom:1.25rem;font-style:italic;font-weight:400}
+.hero h1 em{font-style:normal;color:var(--rose-gold)}
+.hero-sub{color:rgba(255,255,255,0.65);font-size:1.05rem;line-height:1.7;margin-bottom:2.25rem;max-width:480px}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{display:flex;gap:2rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.1)}
+.hero-stat-num{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:600;color:var(--white);line-height:1;margin-bottom:0.25rem}
+.hero-stat-label{font-size:0.76rem;color:rgba(255,255,255,0.5);letter-spacing:0.04em}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.hero-image-frame{width:400px;height:520px;border-radius:var(--radius-xl);background:linear-gradient(145deg,rgba(201,144,122,0.15),rgba(31,92,77,0.15));border:1px solid rgba(201,144,122,0.2);position:relative;overflow:hidden;backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center}
+.hero-image-placeholder{text-align:center;color:rgba(255,255,255,0.32)}
+.hero-image-placeholder p{font-size:0.82rem;margin-top:0.75rem}
+.hero-badge{position:absolute;bottom:-1.5rem;left:-1.5rem;background:rgba(248,246,242,0.95);backdrop-filter:blur(16px);border-radius:var(--radius-md);padding:1rem 1.25rem;box-shadow:var(--shadow-strong);display:flex;align-items:center;gap:0.75rem;min-width:200px}
+.hero-badge-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--rose-gold),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-badge-text strong{display:block;font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--charcoal)}
+.hero-badge-text span{font-size:0.72rem;color:var(--charcoal-light)}
+.hero-decor{position:absolute;top:-2rem;right:-2rem;width:100px;height:100px;border-radius:50%;border:1px solid rgba(201,144,122,0.3)}
+.hero-decor-2{position:absolute;top:1rem;right:1rem;width:60px;height:60px;border-radius:50%;border:1px solid rgba(196,168,130,0.2)}
+.hero-locations{position:absolute;top:1.5rem;left:1.5rem;right:auto;background:rgba(20,30,28,0.55);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:0.85rem 1rem;max-width:200px}
+.hero-locations strong{display:flex;align-items:center;gap:0.4rem;color:var(--white);font-size:0.72rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.4rem}
+.hero-locations span{font-size:0.76rem;color:rgba(255,255,255,0.65);line-height:1.5}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--charcoal);
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
+/* MARQUEE */
+.marquee-section{background:linear-gradient(135deg,var(--rose-gold),var(--emerald));padding:1rem 0;overflow:hidden}
+.marquee-track{display:flex;gap:3rem;animation:marquee 24s linear infinite;width:max-content}
+.marquee-item{display:flex;align-items:center;gap:0.75rem;color:var(--white);font-family:'Poppins',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.5)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    /* ─── TYPOGRAPHY ─── */
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; line-height: 1.2; }
-    h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
-    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
-    h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
-    p { color: var(--charcoal-mid); font-size: 1rem; }
+/* SECTIONS */
+.section{padding:6rem 0}
+.section-alt{background:var(--ivory)}
+.container{max-width:1240px;margin:0 auto;padding:0 2rem}
+.section-header{text-align:center;max-width:660px;margin:0 auto 4rem}
+.section-header h2{margin-bottom:1rem}
+.divider-line{display:flex;align-items:center;justify-content:center;gap:0.75rem;margin:1.25rem auto 0}
+.divider-line span{display:block;height:1px;width:48px;background:linear-gradient(90deg,transparent,var(--rose-gold))}
+.divider-line span:last-child{background:linear-gradient(90deg,var(--rose-gold),transparent)}
+.divider-line i{color:var(--rose-gold)}
 
-    .section-label {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--rose-gold);
-      display: block;
-      margin-bottom: 0.75rem;
-    }
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-image-wrap{position:relative}
+.about-image-main{width:100%;aspect-ratio:3/4;border-radius:var(--radius-xl);background:linear-gradient(145deg,var(--cream),var(--blush));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:var(--shadow-mid)}
+.about-image-placeholder{text-align:center;color:var(--charcoal-light);opacity:0.5}
+.about-image-accent{position:absolute;bottom:-1.5rem;right:-1.5rem;width:155px;height:195px;border-radius:var(--radius-lg);background:linear-gradient(145deg,var(--emerald-light),var(--emerald));border:3px solid var(--white);box-shadow:var(--shadow-mid);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);font-size:0.74rem;text-align:center;padding:1rem}
+.about-experience-badge{position:absolute;top:-1.5rem;left:-1.5rem;background:linear-gradient(135deg,var(--rose-gold),var(--gold));border-radius:var(--radius-md);padding:1.25rem;text-align:center;box-shadow:var(--shadow-mid)}
+.about-experience-badge strong{display:block;font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--white);line-height:1}
+.about-experience-badge span{font-size:0.7rem;color:rgba(255,255,255,0.8);letter-spacing:0.04em}
+.about-content p{margin-bottom:1.25rem}
+.about-brands{margin-top:2rem}
+.about-brands-label{font-size:0.74rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--charcoal-light);margin-bottom:0.75rem}
+.about-brands-list{display:flex;flex-wrap:wrap;gap:0.5rem}
+.brand-chip{background:var(--white);border:1px solid var(--border);border-radius:100px;padding:0.35rem 0.9rem;font-size:0.78rem;font-weight:500;color:var(--charcoal-mid);transition:all var(--transition)}
+.brand-chip:hover{border-color:var(--rose-gold);color:var(--rose-gold)}
+.about-credentials{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.credential-card{background:var(--ivory);border-radius:var(--radius-md);padding:1.25rem;border:1px solid var(--border);display:flex;gap:0.75rem;align-items:flex-start;transition:all var(--transition)}
+.credential-card:hover{border-color:var(--rose-gold);box-shadow:var(--shadow-soft)}
+.credential-icon{width:36px;height:36px;background:linear-gradient(135deg,rgba(201,144,122,0.12),rgba(31,92,77,0.08));border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--rose-gold);flex-shrink:0}
+.credential-text strong{display:block;font-size:0.84rem;margin-bottom:0.15rem}
+.credential-text span{font-size:0.74rem;color:var(--charcoal-light)}
 
-    /* ─── BUTTONS ─── */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      border-radius: 100px;
-      padding: 0.85rem 2rem;
-      cursor: pointer;
-      border: none;
-      text-decoration: none;
-      transition: all var(--transition);
-      white-space: nowrap;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      color: var(--white);
-      box-shadow: 0 4px 20px rgba(201,144,122,0.35);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(201,144,122,0.45);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--charcoal);
-      border: 1.5px solid var(--border);
-      backdrop-filter: blur(8px);
-    }
-    .btn-outline:hover {
-      background: var(--ivory);
-      border-color: var(--rose-gold);
-      color: var(--rose-gold);
-      transform: translateY(-2px);
-    }
-    .btn-ghost {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.5);
-    }
-    .btn-ghost:hover {
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.8);
-    }
+/* TECHNIQUES STRIP */
+.techniques-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:1rem}
+.technique-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;text-align:center;transition:all var(--transition)}
+.technique-card:hover{border-color:var(--rose-gold);box-shadow:var(--shadow-soft);transform:translateY(-4px)}
+.technique-icon{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,rgba(201,144,122,0.12),rgba(31,92,77,0.1));display:flex;align-items:center;justify-content:center;color:var(--rose-gold);margin:0 auto 1rem}
+.technique-card h4{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:0.5rem}
+.technique-card p{font-size:0.84rem}
 
-    /* ─── NAVBAR ─── */
-    .navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 1.25rem 0;
-      transition: all var(--transition);
-    }
-    .navbar.scrolled {
-      background: rgba(248,246,242,0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: 0 2px 24px rgba(44,44,44,0.07);
-      padding: 0.85rem 0;
-    }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--white);
-      text-decoration: none;
-      transition: color var(--transition);
-      letter-spacing: 0.02em;
-    }
-    .navbar.scrolled .nav-logo { color: var(--charcoal); }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.88);
-      text-decoration: none;
-      transition: color var(--transition);
-      letter-spacing: 0.02em;
-    }
-    .navbar.scrolled .nav-links a { color: var(--charcoal-mid); }
-    .nav-links a:hover, .navbar.scrolled .nav-links a:hover { color: var(--rose-gold); }
-    .nav-cta {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      color: var(--white);
-      padding: 0.6rem 1.4rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: all var(--transition);
-      box-shadow: 0 4px 16px rgba(201,144,122,0.3);
-    }
-    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(201,144,122,0.4); }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 2px;
-      transition: all var(--transition);
-    }
-    .navbar.scrolled .hamburger span { background: var(--charcoal); }
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:all var(--transition);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rose-gold),var(--emerald));transform:scaleX(0);transition:transform var(--transition);transform-origin:left}
+.service-card:hover{border-color:rgba(201,144,122,0.4);box-shadow:var(--shadow-mid);transform:translateY(-4px)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card.featured{background:linear-gradient(145deg,#143F35,#1F5C4D)}
+.service-card.featured h3,.service-card.featured p{color:var(--white)}
+.service-card.featured p{color:rgba(255,255,255,0.65)}
+.service-card.featured .service-price{color:var(--rose-gold)}
+.service-icon{width:52px;height:52px;background:linear-gradient(135deg,rgba(201,144,122,0.12),rgba(31,92,77,0.08));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--rose-gold);margin-bottom:1.25rem}
+.service-card.featured .service-icon{background:rgba(201,144,122,0.2)}
+.service-card h3{margin-bottom:0.6rem;font-size:1.12rem}
+.service-card p{font-size:0.87rem;margin-bottom:1.25rem;line-height:1.6}
+.service-meta{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;border-top:1px solid var(--border);margin-top:auto}
+.service-card.featured .service-meta{border-top-color:rgba(255,255,255,0.1)}
+.service-price{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--rose-gold)}
+.service-price small{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--charcoal-light);font-style:normal}
+.service-duration{display:flex;align-items:center;gap:0.35rem;font-size:0.74rem;color:var(--charcoal-light)}
+.service-card.featured .service-duration{color:rgba(255,255,255,0.5)}
+.service-book-btn{margin-top:1.25rem;width:100%;padding:0.7rem;border-radius:100px;font-family:'Poppins',sans-serif;font-size:0.8rem;font-weight:600;cursor:pointer;transition:all var(--transition);text-decoration:none;display:flex;align-items:center;justify-content:center}
+.service-book-btn.outline{background:transparent;border:1.5px solid var(--border);color:var(--charcoal)}
+.service-book-btn.outline:hover{border-color:var(--rose-gold);color:var(--rose-gold)}
+.service-book-btn.solid{background:linear-gradient(135deg,var(--rose-gold),var(--gold));border:none;color:var(--white)}
+.service-book-btn.solid:hover{box-shadow:0 4px 20px rgba(201,144,122,0.4);transform:translateY(-1px)}
 
-    /* ─── MOBILE MENU ─── */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: var(--ivory);
-      z-index: 999;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      color: var(--charcoal);
-      text-decoration: none;
-      transition: color var(--transition);
-    }
-    .mobile-menu a:hover { color: var(--rose-gold); }
-    .mobile-close {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--charcoal);
-    }
+/* PACKAGES */
+.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.package-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius-xl);padding:2.5rem;transition:all var(--transition);position:relative;display:flex;flex-direction:column}
+.package-card:hover{border-color:rgba(201,144,122,0.4);box-shadow:var(--shadow-mid);transform:translateY(-6px)}
+.package-card.popular{background:linear-gradient(160deg,#143F35 0%,#1F5C4D 100%);border-color:var(--rose-gold);box-shadow:0 12px 48px rgba(31,92,77,0.25)}
+.package-popular-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--rose-gold),var(--gold));color:var(--white);font-family:'Poppins',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 1.2rem;border-radius:100px;white-space:nowrap}
+.package-name{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--charcoal);margin-bottom:0.4rem}
+.package-card.popular .package-name{color:var(--white)}
+.package-subtitle{font-size:0.8rem;color:var(--charcoal-light);margin-bottom:1.5rem}
+.package-card.popular .package-subtitle{color:rgba(255,255,255,0.55)}
+.package-price-wrap{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.package-card.popular .package-price-wrap{border-bottom-color:rgba(255,255,255,0.1)}
+.package-price{font-family:'Playfair Display',serif;font-size:2.3rem;color:var(--charcoal);line-height:1}
+.package-card.popular .package-price{color:var(--white)}
+.package-price sup{font-size:1.15rem;font-family:'Inter',sans-serif;vertical-align:super}
+.package-price-note{font-size:0.74rem;color:var(--charcoal-light);margin-top:0.3rem}
+.package-card.popular .package-price-note{color:rgba(255,255,255,0.5)}
+.package-features{list-style:none;display:flex;flex-direction:column;gap:0.75rem;flex-grow:1;margin-bottom:2rem}
+.package-features li{display:flex;align-items:center;gap:0.6rem;font-size:0.86rem;color:var(--charcoal-mid)}
+.package-card.popular .package-features li{color:rgba(255,255,255,0.7)}
+.package-features li i{color:var(--rose-gold);flex-shrink:0}
+.package-features li.disabled{opacity:0.4}
+.package-features li.disabled i{color:var(--charcoal-light)}
+.package-btn{width:100%;padding:0.9rem;border-radius:100px;font-family:'Poppins',sans-serif;font-size:0.84rem;font-weight:600;cursor:pointer;transition:all var(--transition);text-align:center;text-decoration:none;display:block;border:none}
+.package-btn.outlined{background:transparent;border:1.5px solid var(--border);color:var(--charcoal)}
+.package-btn.outlined:hover{border-color:var(--rose-gold);color:var(--rose-gold)}
+.package-btn.filled{background:linear-gradient(135deg,var(--rose-gold),var(--gold));color:var(--white);box-shadow:0 4px 20px rgba(201,144,122,0.3)}
+.package-btn.filled:hover{box-shadow:0 8px 32px rgba(201,144,122,0.4);transform:translateY(-2px)}
 
-    /* ─── HERO ─── */
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(165deg, #2C1F1A 0%, #3D2822 35%, #4A3530 60%, #3A2A25 100%);
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,144,122,0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(196,168,130,0.12) 0%, transparent 50%);
-    }
-    .hero-grain {
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      opacity: 0.4;
-      pointer-events: none;
-    }
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 8rem 2rem 5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-content { max-width: 560px; }
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: rgba(201,144,122,0.12);
-      border: 1px solid rgba(201,144,122,0.3);
-      border-radius: 100px;
-      padding: 0.4rem 1rem;
-      margin-bottom: 1.75rem;
-    }
-    .hero-eyebrow span {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--rose-gold);
-    }
-    .hero-eyebrow-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--rose-gold);
-    }
-    .hero h1 {
-      color: var(--white);
-      margin-bottom: 1.25rem;
-      font-style: italic;
-      font-weight: 400;
-    }
-    .hero h1 em { font-style: normal; color: var(--rose-gold); }
-    .hero-sub {
-      color: rgba(255,255,255,0.65);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 2.25rem;
-      max-width: 460px;
-    }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .hero-stats {
-      display: flex;
-      gap: 2rem;
-      margin-top: 3.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .hero-stat {}
-    .hero-stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-    .hero-stat-label {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.05em;
-    }
-    .hero-visual {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-    .hero-image-frame {
-      width: 420px;
-      height: 540px;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(145deg, rgba(201,144,122,0.15), rgba(196,168,130,0.08));
-      border: 1px solid rgba(201,144,122,0.2);
-      position: relative;
-      overflow: hidden;
-      backdrop-filter: blur(12px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-image-placeholder {
-      text-align: center;
-      color: rgba(255,255,255,0.3);
-    }
-    .hero-image-placeholder i { margin-bottom: 1rem; }
-    .hero-image-placeholder p { font-size: 0.85rem; }
-    .hero-badge {
-      position: absolute;
-      bottom: -1.5rem;
-      left: -1.5rem;
-      background: rgba(248,246,242,0.95);
-      backdrop-filter: blur(16px);
-      border-radius: var(--radius-md);
-      padding: 1rem 1.25rem;
-      box-shadow: var(--shadow-strong);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      min-width: 200px;
-    }
-    .hero-badge-icon {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .hero-badge-text strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 0.9rem;
-      color: var(--charcoal);
-    }
-    .hero-badge-text span { font-size: 0.72rem; color: var(--charcoal-light); }
-    .hero-decor {
-      position: absolute;
-      top: -2rem;
-      right: -2rem;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 1px solid rgba(201,144,122,0.3);
-    }
-    .hero-decor-2 {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 1px solid rgba(196,168,130,0.2);
-    }
+/* PORTFOLIO */
+.portfolio-note{max-width:660px;margin:-2rem auto 2.5rem;text-align:center;font-size:0.84rem;color:var(--charcoal-light);background:var(--ivory);border:1px solid var(--border);border-radius:var(--radius-md);padding:0.9rem 1.25rem}
+.portfolio-filters{display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.filter-btn{font-family:'Poppins',sans-serif;font-size:0.78rem;font-weight:500;padding:0.5rem 1.25rem;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--charcoal-mid);cursor:pointer;transition:all var(--transition)}
+.filter-btn.active,.filter-btn:hover{background:linear-gradient(135deg,var(--rose-gold),var(--emerald));color:var(--white);border-color:transparent}
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.portfolio-item{border-radius:var(--radius-md);overflow:hidden;position:relative;cursor:pointer;background:var(--cream)}
+.portfolio-item:nth-child(1),.portfolio-item:nth-child(5){grid-row:span 2}
+.portfolio-thumb{width:100%;height:100%;min-height:200px;display:flex;align-items:center;justify-content:center;color:var(--charcoal-light);opacity:0.4;font-size:0.74rem;text-align:center;padding:1rem;aspect-ratio:3/4}
+.portfolio-item:nth-child(1) .portfolio-thumb,.portfolio-item:nth-child(5) .portfolio-thumb{aspect-ratio:unset;min-height:420px}
+.portfolio-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,63,53,0.88) 100%);opacity:0;transition:opacity var(--transition);display:flex;align-items:flex-end;padding:1.25rem}
+.portfolio-item:hover .portfolio-overlay{opacity:1}
+.portfolio-caption strong{display:block;font-family:'Playfair Display',serif;font-size:0.95rem;margin-bottom:0.2rem;color:var(--white)}
+.portfolio-caption span{font-size:0.74rem;opacity:0.7;color:var(--white)}
+.portfolio-cta{text-align:center;margin-top:2.5rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
 
-    /* ─── MARQUEE ─── */
-    .marquee-section {
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      padding: 1rem 0;
-      overflow: hidden;
-    }
-    .marquee-track {
-      display: flex;
-      gap: 3rem;
-      animation: marquee 22s linear infinite;
-      width: max-content;
-    }
-    .marquee-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--white);
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+/* TESTIMONIALS */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testimonial-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:all var(--transition)}
+.testimonial-card:hover{box-shadow:var(--shadow-mid);transform:translateY(-3px)}
+.testimonial-card.featured{background:linear-gradient(145deg,#143F35,#1F5C4D)}
+.testimonial-stars{display:flex;gap:3px;margin-bottom:1rem;color:var(--gold)}
+.testimonial-text{font-size:0.9rem;line-height:1.7;color:var(--charcoal-mid);margin-bottom:1.5rem;font-style:italic}
+.testimonial-card.featured .testimonial-text{color:rgba(255,255,255,0.72)}
+.testimonial-footer{display:flex;align-items:center;gap:0.75rem}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blush),var(--cream));display:flex;align-items:center;justify-content:center;color:var(--rose-gold);font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;flex-shrink:0}
+.testimonial-card.featured .testimonial-avatar{background:rgba(201,144,122,0.2);color:var(--rose-gold)}
+.testimonial-info strong{display:block;font-size:0.86rem;color:var(--charcoal);margin-bottom:0.15rem}
+.testimonial-card.featured .testimonial-info strong{color:var(--white)}
+.testimonial-info span{font-size:0.74rem;color:var(--charcoal-light)}
+.testimonial-card.featured .testimonial-info span{color:rgba(255,255,255,0.45)}
+.testimonial-event-tag{margin-left:auto;background:rgba(201,144,122,0.1);border:1px solid rgba(201,144,122,0.2);border-radius:100px;padding:0.25rem 0.75rem;font-size:0.68rem;color:var(--rose-gold);font-weight:500}
+.testimonial-card.featured .testimonial-event-tag{background:rgba(201,144,122,0.15);border-color:rgba(201,144,122,0.3)}
+.testimonial-source-note{text-align:center;margin-top:2rem;font-size:0.8rem;color:var(--charcoal-light)}
+.testimonial-source-note a{color:var(--rose-gold);text-decoration:none;font-weight:500}
 
-    /* ─── SECTION COMMONS ─── */
-    .section { padding: 6rem 0; }
-    .section-alt { background: var(--ivory); }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-    .section-header { text-align: center; max-width: 640px; margin: 0 auto 4rem; }
-    .section-header h2 { margin-bottom: 1rem; }
-    .section-header p { font-size: 1.05rem; }
-    .divider-line {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      margin: 1.25rem auto 0;
-    }
-    .divider-line span {
-      display: block;
-      height: 1px;
-      width: 48px;
-      background: linear-gradient(90deg, transparent, var(--rose-gold));
-    }
-    .divider-line span:last-child { background: linear-gradient(90deg, var(--rose-gold), transparent); }
-    .divider-line i { color: var(--rose-gold); }
+/* BOOKING */
+.booking-section{background:linear-gradient(160deg,#143F35 0%,#1F5C4D 45%,#2C1F1A 100%);position:relative;overflow:hidden}
+.booking-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 20%,rgba(201,144,122,0.15) 0%,transparent 60%)}
+.booking-section .section-label{color:rgba(201,144,122,0.9)}
+.booking-section .section-header h2{color:var(--white)}
+.booking-section .section-header p{color:rgba(255,255,255,0.62)}
+.booking-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3.5rem;align-items:start;position:relative;z-index:1}
+.booking-info h3{font-family:'Playfair Display',serif;color:var(--white);margin-bottom:1rem}
+.booking-info p{color:rgba(255,255,255,0.62);margin-bottom:1.5rem}
 
-    /* ─── ABOUT ─── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .about-image-wrap {
-      position: relative;
-    }
-    .about-image-main {
-      width: 100%;
-      aspect-ratio: 3/4;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(145deg, var(--cream), var(--blush));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-mid);
-    }
-    .about-image-placeholder {
-      text-align: center;
-      color: var(--charcoal-light);
-      opacity: 0.5;
-    }
-    .about-image-accent {
-      position: absolute;
-      bottom: -1.5rem;
-      right: -1.5rem;
-      width: 160px;
-      height: 200px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, var(--blush-mid), var(--cream));
-      border: 3px solid var(--white);
-      box-shadow: var(--shadow-mid);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--charcoal-light);
-      font-size: 0.75rem;
-      text-align: center;
-      padding: 1rem;
-    }
-    .about-experience-badge {
-      position: absolute;
-      top: -1.5rem;
-      left: -1.5rem;
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      border-radius: var(--radius-md);
-      padding: 1.25rem;
-      text-align: center;
-      box-shadow: var(--shadow-mid);
-    }
-    .about-experience-badge strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: var(--white);
-      line-height: 1;
-    }
-    .about-experience-badge span { font-size: 0.72rem; color: rgba(255,255,255,0.8); letter-spacing: 0.05em; }
-    .about-content {}
-    .about-content h2 { margin-bottom: 1.5rem; }
-    .about-content p { margin-bottom: 1.25rem; }
-    .about-brands {
-      margin-top: 2rem;
-    }
-    .about-brands-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--charcoal-light);
-      margin-bottom: 0.75rem;
-    }
-    .about-brands-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .brand-chip {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.35rem 0.9rem;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--charcoal-mid);
-      transition: all var(--transition);
-    }
-    .brand-chip:hover {
-      border-color: var(--rose-gold);
-      color: var(--rose-gold);
-    }
-    .about-credentials {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .credential-card {
-      background: var(--ivory);
-      border-radius: var(--radius-md);
-      padding: 1.25rem;
-      border: 1px solid var(--border);
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-      transition: all var(--transition);
-    }
-    .credential-card:hover {
-      border-color: var(--rose-gold);
-      box-shadow: var(--shadow-soft);
-    }
-    .credential-icon {
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, rgba(201,144,122,0.12), rgba(196,168,130,0.08));
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--rose-gold);
-      flex-shrink: 0;
-    }
-    .credential-text strong { display: block; font-size: 0.85rem; margin-bottom: 0.15rem; }
-    .credential-text span { font-size: 0.75rem; color: var(--charcoal-light); }
+/* CALENDAR */
+.calendar-card{background:rgba(248,246,242,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.5rem}
+.calendar-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.calendar-head strong{color:var(--white);font-family:'Playfair Display',serif;font-size:1.05rem}
+.calendar-nav{display:flex;gap:0.5rem}
+.calendar-nav button{width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);background:transparent;color:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--transition)}
+.calendar-nav button:hover{background:rgba(201,144,122,0.2);border-color:var(--rose-gold)}
+.calendar-weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:6px}
+.calendar-weekdays span{text-align:center;font-size:0.65rem;color:rgba(255,255,255,0.4);font-weight:600;letter-spacing:0.04em}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:0.78rem;color:rgba(255,255,255,0.3);position:relative}
+.cal-day.active{color:rgba(255,255,255,0.85);cursor:pointer;background:rgba(255,255,255,0.04)}
+.cal-day.active:hover{background:rgba(201,144,122,0.18)}
+.cal-day.vacant{background:rgba(31,92,77,0.35);color:var(--white);font-weight:600}
+.cal-day.vacant::after{content:'';position:absolute;bottom:3px;width:4px;height:4px;border-radius:50%;background:#6FCF97}
+.cal-day.booked{background:rgba(201,144,122,0.3);color:var(--white);cursor:not-allowed}
+.cal-day.booked::after{content:'';position:absolute;bottom:3px;width:4px;height:4px;border-radius:50%;background:#E0846E}
+.cal-day.today{border:1.5px solid var(--rose-gold)}
+.calendar-legend{display:flex;gap:1.25rem;margin-top:1rem;flex-wrap:wrap}
+.calendar-legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.72rem;color:rgba(255,255,255,0.55)}
+.legend-dot{width:8px;height:8px;border-radius:50%}
+.legend-dot.vacant{background:#6FCF97}
+.legend-dot.booked{background:#E0846E}
 
-    /* ─── SERVICES ─── */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      transition: all var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--rose-gold), var(--gold));
-      transform: scaleX(0);
-      transition: transform var(--transition);
-      transform-origin: left;
-    }
-    .service-card:hover {
-      border-color: rgba(201,144,122,0.4);
-      box-shadow: var(--shadow-mid);
-      transform: translateY(-4px);
-    }
-    .service-card:hover::before { transform: scaleX(1); }
-    .service-card.featured {
-      background: linear-gradient(145deg, #2C1F1A, #3D2822);
-      border-color: transparent;
-    }
-    .service-card.featured h3, .service-card.featured p { color: var(--white); }
-    .service-card.featured p { color: rgba(255,255,255,0.65); }
-    .service-card.featured .service-price { color: var(--rose-gold); }
-    .service-icon {
-      width: 52px;
-      height: 52px;
-      background: linear-gradient(135deg, rgba(201,144,122,0.12), rgba(196,168,130,0.08));
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--rose-gold);
-      margin-bottom: 1.25rem;
-    }
-    .service-card.featured .service-icon {
-      background: rgba(201,144,122,0.2);
-    }
-    .service-card h3 { margin-bottom: 0.6rem; font-size: 1.15rem; }
-    .service-card p { font-size: 0.88rem; margin-bottom: 1.25rem; line-height: 1.6; }
-    .service-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-      margin-top: auto;
-    }
-    .service-card.featured .service-meta { border-top-color: rgba(255,255,255,0.1); }
-    .service-price {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--rose-gold);
-    }
-    .service-price small {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem;
-      color: var(--charcoal-light);
-      font-style: normal;
-    }
-    .service-duration {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.75rem;
-      color: var(--charcoal-light);
-    }
-    .service-card.featured .service-duration { color: rgba(255,255,255,0.5); }
-    .service-book-btn {
-      margin-top: 1.25rem;
-      width: 100%;
-      padding: 0.7rem;
-      border-radius: 100px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all var(--transition);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .service-book-btn.outline {
-      background: transparent;
-      border: 1.5px solid var(--border);
-      color: var(--charcoal);
-    }
-    .service-book-btn.outline:hover {
-      border-color: var(--rose-gold);
-      color: var(--rose-gold);
-    }
-    .service-book-btn.solid {
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      border: none;
-      color: var(--white);
-    }
-    .service-book-btn.solid:hover {
-      box-shadow: 0 4px 20px rgba(201,144,122,0.4);
-      transform: translateY(-1px);
-    }
+.booking-payment-info{background:rgba(248,246,242,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);padding:1.25rem}
+.payment-title{font-size:0.73rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:1rem}
+.payment-methods{display:flex;flex-direction:column;gap:0.6rem}
+.payment-method{display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.7);font-size:0.84rem}
+.payment-method i{color:var(--rose-gold)}
 
-    /* ─── PACKAGES ─── */
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-    .package-card {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-xl);
-      padding: 2.5rem;
-      transition: all var(--transition);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-    .package-card:hover {
-      border-color: rgba(201,144,122,0.4);
-      box-shadow: var(--shadow-mid);
-      transform: translateY(-6px);
-    }
-    .package-card.popular {
-      background: linear-gradient(160deg, #2C1F1A 0%, #3D2822 100%);
-      border-color: var(--rose-gold);
-      box-shadow: 0 12px 48px rgba(201,144,122,0.2);
-    }
-    .package-popular-tag {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      color: var(--white);
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 1.2rem;
-      border-radius: 100px;
-      white-space: nowrap;
-    }
-    .package-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      color: var(--charcoal);
-      margin-bottom: 0.4rem;
-    }
-    .package-card.popular .package-name { color: var(--white); }
-    .package-subtitle {
-      font-size: 0.82rem;
-      color: var(--charcoal-light);
-      margin-bottom: 1.5rem;
-    }
-    .package-card.popular .package-subtitle { color: rgba(255,255,255,0.55); }
-    .package-price-wrap {
-      margin-bottom: 1.75rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .package-card.popular .package-price-wrap { border-bottom-color: rgba(255,255,255,0.1); }
-    .package-price {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      color: var(--charcoal);
-      line-height: 1;
-    }
-    .package-card.popular .package-price { color: var(--white); }
-    .package-price sup {
-      font-size: 1.2rem;
-      font-family: 'Inter', sans-serif;
-      vertical-align: super;
-    }
-    .package-price-note {
-      font-size: 0.75rem;
-      color: var(--charcoal-light);
-      margin-top: 0.3rem;
-    }
-    .package-card.popular .package-price-note { color: rgba(255,255,255,0.5); }
-    .package-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      flex-grow: 1;
-      margin-bottom: 2rem;
-    }
-    .package-features li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.88rem;
-      color: var(--charcoal-mid);
-    }
-    .package-card.popular .package-features li { color: rgba(255,255,255,0.7); }
-    .package-features li i { color: var(--rose-gold); flex-shrink: 0; }
-    .package-features li.disabled { opacity: 0.4; }
-    .package-features li.disabled i { color: var(--charcoal-light); }
-    .package-btn {
-      width: 100%;
-      padding: 0.9rem;
-      border-radius: 100px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all var(--transition);
-      text-align: center;
-      text-decoration: none;
-      display: block;
-      border: none;
-    }
-    .package-btn.outlined {
-      background: transparent;
-      border: 1.5px solid var(--border);
-      color: var(--charcoal);
-    }
-    .package-btn.outlined:hover {
-      border-color: var(--rose-gold);
-      color: var(--rose-gold);
-    }
-    .package-btn.filled {
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      color: var(--white);
-      box-shadow: 0 4px 20px rgba(201,144,122,0.3);
-    }
-    .package-btn.filled:hover {
-      box-shadow: 0 8px 32px rgba(201,144,122,0.4);
-      transform: translateY(-2px);
-    }
+.booking-form{background:var(--white);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:var(--shadow-strong)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{margin-bottom:1.25rem}
+.form-group label{display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.04em;color:var(--charcoal);margin-bottom:0.4rem}
+.form-group label span{color:var(--rose-gold);margin-left:2px}
+.form-input,.form-select,.form-textarea{width:100%;padding:0.75rem 1rem;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--charcoal);background:var(--white);transition:all var(--transition);outline:none;appearance:none}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--rose-gold);box-shadow:0 0 0 3px rgba(201,144,122,0.1)}
+.form-input::placeholder{color:var(--charcoal-light);opacity:0.7}
+.form-textarea{resize:vertical;min-height:100px}
+.form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236B6B6B'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.75rem center;background-size:1.1rem;padding-right:2.5rem}
+.form-checkboxes{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.form-checkbox{display:flex;align-items:center;gap:0.5rem;cursor:pointer}
+.form-checkbox input{width:16px;height:16px;border-radius:4px;border:1.5px solid var(--border);accent-color:var(--rose-gold);cursor:pointer}
+.form-checkbox span{font-size:0.82rem;color:var(--charcoal-mid)}
+.form-terms{display:flex;align-items:flex-start;gap:0.6rem;cursor:pointer;margin-bottom:1.5rem}
+.form-terms input{margin-top:2px;accent-color:var(--rose-gold)}
+.form-terms span{font-size:0.8rem;color:var(--charcoal-light);line-height:1.5}
+.form-terms a{color:var(--rose-gold);text-decoration:none}
+.form-submit{width:100%;padding:1rem;background:linear-gradient(135deg,var(--rose-gold),var(--gold));color:var(--white);border:none;border-radius:100px;font-family:'Poppins',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all var(--transition);box-shadow:0 4px 20px rgba(201,144,122,0.35)}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,144,122,0.45)}
+.form-note{font-size:0.76rem;color:var(--charcoal-light);margin-top:0.75rem;display:flex;align-items:center;gap:0.4rem}
 
-    /* ─── PORTFOLIO ─── */
-    .portfolio-filters {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 2.5rem;
-    }
-    .filter-btn {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      padding: 0.5rem 1.25rem;
-      border-radius: 100px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--charcoal-mid);
-      cursor: pointer;
-      transition: all var(--transition);
-    }
-    .filter-btn.active, .filter-btn:hover {
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      color: var(--white);
-      border-color: transparent;
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
-    .portfolio-item {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-      background: var(--cream);
-    }
-    .portfolio-item:nth-child(1), .portfolio-item:nth-child(5) {
-      grid-row: span 2;
-    }
-    .portfolio-thumb {
-      width: 100%;
-      height: 100%;
-      min-height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--charcoal-light);
-      opacity: 0.4;
-      font-size: 0.75rem;
-      text-align: center;
-      padding: 1rem;
-      aspect-ratio: 3/4;
-    }
-    .portfolio-item:nth-child(1) .portfolio-thumb,
-    .portfolio-item:nth-child(5) .portfolio-thumb {
-      aspect-ratio: unset;
-      min-height: 420px;
-    }
-    .portfolio-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(44,31,26,0.85) 100%);
-      opacity: 0;
-      transition: opacity var(--transition);
-      display: flex;
-      align-items: flex-end;
-      padding: 1.25rem;
-    }
-    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
-    .portfolio-caption {
-      color: var(--white);
-    }
-    .portfolio-caption strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      margin-bottom: 0.2rem;
-    }
-    .portfolio-caption span { font-size: 0.75rem; opacity: 0.7; }
-    .portfolio-cta { text-align: center; margin-top: 2.5rem; }
+.booking-success{display:none;text-align:center;padding:3rem;background:var(--white);border-radius:var(--radius-xl)}
+.booking-success.show{display:block}
+.success-icon{width:72px;height:72px;background:linear-gradient(135deg,var(--rose-gold),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;color:var(--white)}
+.booking-id{display:inline-block;background:var(--ivory);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.5rem 1.25rem;font-family:'Poppins',sans-serif;font-size:0.86rem;font-weight:600;color:var(--rose-gold);letter-spacing:0.06em;margin:1rem 0}
 
-    /* ─── TESTIMONIALS ─── */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .testimonial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      transition: all var(--transition);
-    }
-    .testimonial-card:hover {
-      box-shadow: var(--shadow-mid);
-      transform: translateY(-3px);
-    }
-    .testimonial-card.featured {
-      background: linear-gradient(145deg, #2C1F1A, #3D2822);
-      border-color: transparent;
-    }
-    .testimonial-stars {
-      display: flex;
-      gap: 3px;
-      margin-bottom: 1rem;
-      color: var(--gold);
-    }
-    .testimonial-text {
-      font-size: 0.92rem;
-      line-height: 1.7;
-      color: var(--charcoal-mid);
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-    .testimonial-card.featured .testimonial-text { color: rgba(255,255,255,0.7); }
-    .testimonial-footer { display: flex; align-items: center; gap: 0.75rem; }
-    .testimonial-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--blush), var(--cream));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--rose-gold);
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 600;
-      flex-shrink: 0;
-    }
-    .testimonial-card.featured .testimonial-avatar {
-      background: rgba(201,144,122,0.2);
-      color: var(--rose-gold);
-    }
-    .testimonial-info strong {
-      display: block;
-      font-size: 0.88rem;
-      color: var(--charcoal);
-      margin-bottom: 0.15rem;
-    }
-    .testimonial-card.featured .testimonial-info strong { color: var(--white); }
-    .testimonial-info span { font-size: 0.75rem; color: var(--charcoal-light); }
-    .testimonial-card.featured .testimonial-info span { color: rgba(255,255,255,0.45); }
-    .testimonial-event-tag {
-      margin-left: auto;
-      background: rgba(201,144,122,0.1);
-      border: 1px solid rgba(201,144,122,0.2);
-      border-radius: 100px;
-      padding: 0.25rem 0.75rem;
-      font-size: 0.7rem;
-      color: var(--rose-gold);
-      font-weight: 500;
-    }
-    .testimonial-card.featured .testimonial-event-tag {
-      background: rgba(201,144,122,0.15);
-      border-color: rgba(201,144,122,0.3);
-    }
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-question{width:100%;text-align:left;padding:1.5rem 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--charcoal);transition:color var(--transition)}
+.faq-question:hover{color:var(--rose-gold)}
+.faq-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--transition);color:var(--rose-gold)}
+.faq-item.open .faq-icon{background:linear-gradient(135deg,var(--rose-gold),var(--gold));color:var(--white);border-color:transparent;transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.faq-item.open .faq-answer{max-height:220px}
+.faq-answer p{padding-bottom:1.5rem;font-size:0.9rem;line-height:1.75}
 
-    /* ─── BOOKING FORM ─── */
-    .booking-section {
-      background: linear-gradient(160deg, #2C1F1A 0%, #3D2822 50%, #4A3530 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    .booking-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 80% 20%, rgba(201,144,122,0.15) 0%, transparent 60%);
-    }
-    .booking-section .section-label { color: rgba(201,144,122,0.9); }
-    .booking-section .section-header h2 { color: var(--white); }
-    .booking-section .section-header p { color: rgba(255,255,255,0.6); }
-    .booking-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 4rem;
-      align-items: start;
-      position: relative;
-      z-index: 1;
-    }
-    .booking-info {}
-    .booking-info h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-    .booking-info p { color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
-    .booking-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .booking-step {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .step-num {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(201,144,122,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 0.9rem;
-      color: var(--rose-gold);
-      flex-shrink: 0;
-    }
-    .step-content strong {
-      display: block;
-      color: var(--white);
-      font-size: 0.9rem;
-      margin-bottom: 0.2rem;
-    }
-    .step-content span { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
-    .booking-payment-info {
-      background: rgba(248,246,242,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-md);
-      padding: 1.25rem;
-    }
-    .payment-title {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 1rem;
-    }
-    .payment-methods {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .payment-method {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: rgba(255,255,255,0.7);
-      font-size: 0.85rem;
-    }
-    .payment-method i { color: var(--rose-gold); }
-    .booking-form {
-      background: var(--white);
-      border-radius: var(--radius-xl);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-strong);
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .form-group {
-      margin-bottom: 1.25rem;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--charcoal);
-      margin-bottom: 0.4rem;
-    }
-    .form-group label span { color: var(--rose-gold); margin-left: 2px; }
-    .form-input, .form-select, .form-textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      color: var(--charcoal);
-      background: var(--white);
-      transition: all var(--transition);
-      outline: none;
-      appearance: none;
-    }
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--rose-gold);
-      box-shadow: 0 0 0 3px rgba(201,144,122,0.1);
-    }
-    .form-input::placeholder { color: var(--charcoal-light); opacity: 0.7; }
-    .form-textarea { resize: vertical; min-height: 100px; }
-    .form-select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236B6B6B'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.75rem center;
-      background-size: 1.1rem;
-      padding-right: 2.5rem;
-    }
-    .form-checkboxes {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-    }
-    .form-checkbox {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-    }
-    .form-checkbox input {
-      width: 16px;
-      height: 16px;
-      border-radius: 4px;
-      border: 1.5px solid var(--border);
-      accent-color: var(--rose-gold);
-      cursor: pointer;
-    }
-    .form-checkbox span { font-size: 0.82rem; color: var(--charcoal-mid); }
-    .form-upload {
-      border: 2px dashed var(--border);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-      text-align: center;
-      cursor: pointer;
-      transition: all var(--transition);
-    }
-    .form-upload:hover {
-      border-color: var(--rose-gold);
-      background: rgba(201,144,122,0.03);
-    }
-    .form-upload i { color: var(--rose-gold); margin-bottom: 0.5rem; }
-    .form-upload p { font-size: 0.82rem; color: var(--charcoal-light); margin: 0; }
-    .form-upload strong { color: var(--charcoal); font-size: 0.85rem; }
-    .form-terms {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      cursor: pointer;
-      margin-bottom: 1.5rem;
-    }
-    .form-terms input { margin-top: 2px; accent-color: var(--rose-gold); }
-    .form-terms span { font-size: 0.8rem; color: var(--charcoal-light); line-height: 1.5; }
-    .form-terms a { color: var(--rose-gold); text-decoration: none; }
-    .form-submit {
-      width: 100%;
-      padding: 1rem;
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      color: var(--white);
-      border: none;
-      border-radius: 100px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all var(--transition);
-      box-shadow: 0 4px 20px rgba(201,144,122,0.35);
-    }
-    .form-submit:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(201,144,122,0.45);
-    }
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem}
+.contact-info > p{margin-bottom:2rem}
+.contact-items{display:flex;flex-direction:column;gap:1.25rem;margin-bottom:2rem}
+.contact-item{display:flex;gap:1rem;align-items:flex-start}
+.contact-item-icon{width:44px;height:44px;background:linear-gradient(135deg,rgba(201,144,122,0.1),rgba(31,92,77,0.08));border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--rose-gold);flex-shrink:0}
+.contact-item-text strong{display:block;font-size:0.82rem;color:var(--charcoal);margin-bottom:0.15rem}
+.contact-item-text span{font-size:0.87rem;color:var(--charcoal-mid)}
+.contact-socials{display:flex;gap:0.75rem;flex-wrap:wrap}
+.social-link{display:flex;align-items:center;gap:0.5rem;padding:0.55rem 1.1rem;border:1px solid var(--border);border-radius:100px;font-size:0.8rem;color:var(--charcoal-mid);text-decoration:none;transition:all var(--transition);font-weight:500}
+.social-link.fb:hover{border-color:#1877F2;color:#1877F2}
+.social-link.ig:hover{border-color:#C13584;color:#C13584}
+.social-link.tt:hover{border-color:#000;color:#000}
+.coverage-card{background:var(--ivory);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;margin-top:1.5rem}
+.coverage-card strong{display:flex;align-items:center;gap:0.5rem;font-size:0.84rem;color:var(--charcoal);margin-bottom:0.85rem}
+.coverage-list{display:flex;flex-wrap:wrap;gap:0.5rem}
+.coverage-chip{background:var(--white);border:1px solid var(--border);border-radius:100px;padding:0.35rem 0.85rem;font-size:0.76rem;color:var(--charcoal-mid)}
 
-    /* ─── BOOKING SUCCESS ─── */
-    .booking-success {
-      display: none;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .booking-success.show { display: block; }
-    .success-icon {
-      width: 72px;
-      height: 72px;
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      color: var(--white);
-    }
-    .booking-id {
-      display: inline-block;
-      background: var(--ivory);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 0.5rem 1.25rem;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--rose-gold);
-      letter-spacing: 0.08em;
-      margin: 1rem 0;
-    }
+/* ADMIN CALLOUT */
+.admin-callout{display:flex;align-items:center;gap:1rem;background:var(--ivory);border:1px solid var(--border);border-radius:var(--radius-md);padding:1rem 1.25rem;margin-top:1.5rem;text-decoration:none;transition:all var(--transition)}
+.admin-callout:hover{border-color:var(--rose-gold);box-shadow:var(--shadow-soft)}
+.admin-callout-icon{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--emerald),var(--emerald-light));display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0}
+.admin-callout-text strong{display:block;font-size:0.84rem;color:var(--charcoal)}
+.admin-callout-text span{font-size:0.76rem;color:var(--charcoal-light)}
 
-    /* ─── FAQ ─── */
-    .faq-list { max-width: 760px; margin: 0 auto; }
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      padding: 1.5rem 0;
-      background: none;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      color: var(--charcoal);
-      transition: color var(--transition);
-    }
-    .faq-question:hover { color: var(--rose-gold); }
-    .faq-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: 1.5px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all var(--transition);
-      color: var(--rose-gold);
-    }
-    .faq-item.open .faq-icon {
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      color: var(--white);
-      border-color: transparent;
-      transform: rotate(45deg);
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-    .faq-item.open .faq-answer { max-height: 200px; }
-    .faq-answer p {
-      padding-bottom: 1.5rem;
-      font-size: 0.92rem;
-      line-height: 1.75;
-    }
+/* FOOTER */
+.footer{background:linear-gradient(160deg,#0F2B23 0%,#143F35 100%);padding:4rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.45rem;color:var(--white);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}
+.footer-brand p{color:rgba(255,255,255,0.45);font-size:0.84rem;line-height:1.7;margin-bottom:1.5rem}
+.footer-socials{display:flex;gap:0.75rem;flex-wrap:wrap}
+.footer-social-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);text-decoration:none;transition:all var(--transition)}
+.footer-social-icon:hover{border-color:var(--rose-gold);color:var(--rose-gold)}
+.footer-col h4{font-family:'Poppins',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.25rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.65rem}
+.footer-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:0.87rem;transition:color var(--transition)}
+.footer-links a:hover{color:var(--rose-gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:rgba(255,255,255,0.3);font-size:0.78rem}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{color:rgba(255,255,255,0.3);font-size:0.78rem;text-decoration:none;transition:color var(--transition)}
+.footer-legal a:hover{color:var(--rose-gold)}
 
-    /* ─── CONTACT ─── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 4rem;
-    }
-    .contact-info {}
-    .contact-info h3 { margin-bottom: 1rem; }
-    .contact-info > p { margin-bottom: 2rem; }
-    .contact-items {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .contact-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .contact-item-icon {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, rgba(201,144,122,0.1), rgba(196,168,130,0.06));
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--rose-gold);
-      flex-shrink: 0;
-    }
-    .contact-item-text strong { display: block; font-size: 0.82rem; color: var(--charcoal); margin-bottom: 0.15rem; }
-    .contact-item-text span { font-size: 0.88rem; color: var(--charcoal-mid); }
-    .contact-socials {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      font-size: 0.8rem;
-      color: var(--charcoal-mid);
-      text-decoration: none;
-      transition: all var(--transition);
-    }
-    .social-link:hover {
-      border-color: var(--rose-gold);
-      color: var(--rose-gold);
-    }
-    .contact-map {
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      background: var(--cream);
-      min-height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--charcoal-light);
-      font-size: 0.85rem;
-      border: 1px solid var(--border);
-      text-align: center;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
+/* FLOATING CHAT WIDGET */
+.chat-widget{position:fixed;bottom:2rem;right:2rem;z-index:1100;display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem}
+.chat-bubble{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--rose-gold),var(--emerald));display:flex;align-items:center;justify-content:center;color:white;cursor:pointer;box-shadow:0 8px 30px rgba(31,92,77,0.4);border:none;transition:all var(--transition);animation:float 3s ease-in-out infinite;position:relative}
+.chat-bubble:hover{transform:scale(1.08);animation:none}
+.chat-bubble-ping{position:absolute;top:-3px;right:-3px;width:14px;height:14px;border-radius:50%;background:#6FCF97;border:2px solid white}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.chat-panel{display:none;width:300px;background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-strong);overflow:hidden;border:1px solid var(--border)}
+.chat-panel.open{display:block}
+.chat-panel-head{background:linear-gradient(135deg,var(--rose-gold),var(--emerald));padding:1.1rem 1.25rem;color:white}
+.chat-panel-head strong{display:block;font-family:'Playfair Display',serif;font-size:1.05rem}
+.chat-panel-head span{font-size:0.76rem;opacity:0.85}
+.chat-panel-body{padding:1rem;display:flex;flex-direction:column;gap:0.6rem}
+.chat-option{display:flex;align-items:center;gap:0.75rem;padding:0.75rem 0.9rem;border-radius:var(--radius-sm);text-decoration:none;transition:all var(--transition);border:1px solid var(--border)}
+.chat-option:hover{transform:translateX(2px)}
+.chat-option.fb{color:#1877F2}
+.chat-option.fb:hover{background:rgba(24,119,242,0.06);border-color:#1877F2}
+.chat-option.ig{color:#C13584}
+.chat-option.ig:hover{background:rgba(193,53,132,0.06);border-color:#C13584}
+.chat-option.tt{color:#000}
+.chat-option.tt:hover{background:rgba(0,0,0,0.04);border-color:#000}
+.chat-option-icon{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:currentColor}
+.chat-option-icon i{color:white}
+.chat-option-text strong{display:block;font-size:0.84rem;color:var(--charcoal)}
+.chat-option-text span{font-size:0.72rem;color:var(--charcoal-light)}
 
-    /* ─── FOOTER ─── */
-    .footer {
-      background: linear-gradient(160deg, #1A1210 0%, #2C1F1A 100%);
-      padding: 4rem 0 2rem;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
-    }
-    .footer-brand .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      color: var(--white);
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .footer-brand p {
-      color: rgba(255,255,255,0.45);
-      font-size: 0.85rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-    .footer-socials { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-    .footer-social-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.5);
-      text-decoration: none;
-      transition: all var(--transition);
-    }
-    .footer-social-icon:hover {
-      border-color: var(--rose-gold);
-      color: var(--rose-gold);
-    }
-    .footer-col h4 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 1.25rem;
-    }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-    .footer-links a {
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-      font-size: 0.88rem;
-      transition: color var(--transition);
-    }
-    .footer-links a:hover { color: var(--rose-gold); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .footer-bottom p { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
-    .footer-legal { display: flex; gap: 1.5rem; }
-    .footer-legal a {
-      color: rgba(255,255,255,0.3);
-      font-size: 0.8rem;
-      text-decoration: none;
-      transition: color var(--transition);
-    }
-    .footer-legal a:hover { color: var(--rose-gold); }
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
 
-    /* ─── FLOATING CTA ─── */
-    .floating-cta {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: flex-end;
-    }
-    .floating-cta-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: linear-gradient(135deg, var(--rose-gold), var(--gold));
-      color: var(--white);
-      padding: 0.85rem 1.5rem;
-      border-radius: 100px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 6px 30px rgba(201,144,122,0.4);
-      transition: all var(--transition);
-      animation: float 3s ease-in-out infinite;
-    }
-    .floating-cta-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 40px rgba(201,144,122,0.5);
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-    .floating-cta-btn:hover { animation: none; }
-
-    /* ─── ANIMATIONS ─── */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fade-up:nth-child(2) { transition-delay: 0.1s; }
-    .fade-up:nth-child(3) { transition-delay: 0.2s; }
-    .fade-up:nth-child(4) { transition-delay: 0.3s; }
-    .fade-up:nth-child(5) { transition-delay: 0.4s; }
-    .fade-up:nth-child(6) { transition-delay: 0.5s; }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .services-grid, .packages-grid { grid-template-columns: repeat(2, 1fr); }
-      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-      .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .hero-visual { display: none; }
-      .hero h1 { font-size: 2.2rem; }
-      .about-grid, .contact-grid, .booking-grid { grid-template-columns: 1fr; }
-      .about-image-wrap { display: none; }
-      .services-grid { grid-template-columns: 1fr; }
-      .packages-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-      .portfolio-item:nth-child(1) { grid-row: span 1; }
-      .portfolio-item:nth-child(5) { grid-row: span 1; }
-      .about-credentials { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .hero-stats { gap: 1.5rem; }
-      .section { padding: 4rem 0; }
-    }
-    @media (max-width: 480px) {
-      .portfolio-grid { grid-template-columns: 1fr 1fr; }
-      .hero-actions { flex-direction: column; }
-      .hero-actions .btn { width: 100%; justify-content: center; }
-      .floating-cta-btn span { display: none; }
-    }
-
-    /* ─── COUNTER ─── */
-    .counter { font-variant-numeric: tabular-nums; }
-  </style>
+/* RESPONSIVE */
+@media (max-width:1024px){
+  .services-grid,.packages-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-grid{grid-template-columns:repeat(3,1fr)}
+  .techniques-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-visual{display:none}
+  .hero h1{font-size:2rem}
+  .about-grid,.contact-grid,.booking-grid{grid-template-columns:1fr}
+  .about-image-wrap{display:none}
+  .services-grid,.packages-grid,.testimonials-grid{grid-template-columns:1fr}
+  .techniques-grid{grid-template-columns:1fr 1fr}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-item:nth-child(1),.portfolio-item:nth-child(5){grid-row:span 1}
+  .about-credentials{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .hero-stats{gap:1.5rem}
+  .section{padding:4rem 0}
+  .hero-locations{display:none}
+  .chat-panel{width:88vw;max-width:300px}
+}
+@media (max-width:480px){
+  .portfolio-grid{grid-template-columns:1fr 1fr}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .chat-widget{right:1rem;bottom:1rem}
+}
+.counter{font-variant-numeric:tabular-nums}
+</style>
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="/" class="nav-logo"> Haneeya </a>
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">H</div>
+      <span class="nav-logo-text">Haneeya<small>HMUA Official</small></span>
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -1522,17 +441,13 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#booking" class="nav-cta">Book Now</a>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="toggleMenu()">
-    <i data-lucide="x" width="28" height="28"></i>
-  </button>
+  <button class="mobile-close" onclick="toggleMenu()"><i data-lucide="x" width="28" height="28"></i></button>
   <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#services" onclick="toggleMenu()">Services</a>
   <a href="#packages" onclick="toggleMenu()">Packages</a>
@@ -1550,52 +465,36 @@
     <div class="hero-content">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-dot"></div>
-        <span>Professional Makeup Artist &middot; Philippines</span>
+        <span>HMUA &middot; Makeup by Haneeya &middot; Mindanao</span>
       </div>
-      <h1>Luxury Makeup for Your Most <em>Memorable</em> Moments</h1>
-      <p class="hero-sub">Specializing in weddings, graduations, debuts, and special events across the Philippines. Where artistry meets elegance.</p>
+      <h1>Bridal Glam, Beautifully <em>Draped</em></h1>
+      <p class="hero-sub">Soft base makeup, gentle contouring, elegant eye definition, and flawless hijab draping &mdash; for brides, engagements, prenups, and every event worth remembering. Based in Marawi City and serving Lanao del Sur, Lanao del Norte, Iligan, and Cagayan de Oro.</p>
       <div class="hero-actions">
-        <a href="#booking" class="btn btn-primary">
-          <i data-lucide="calendar" width="16" height="16"></i>
-          Book Your Schedule
-        </a>
-        <a href="#portfolio" class="btn btn-ghost">
-          View Portfolio
-          <i data-lucide="arrow-right" width="16" height="16"></i>
-        </a>
+        <a href="#booking" class="btn btn-primary"><i data-lucide="calendar" width="16" height="16"></i> Book Your Schedule</a>
+        <a href="#portfolio" class="btn btn-ghost">View Portfolio <i data-lucide="arrow-right" width="16" height="16"></i></a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num counter" data-target="800">0</div>
-          <div class="hero-stat-label">Happy Clients</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num counter" data-target="8">0</div>
-          <div class="hero-stat-label">Years Experience</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num counter" data-target="20">0</div>
-          <div class="hero-stat-label">Services Offered</div>
-        </div>
+        <div class="hero-stat"><div class="hero-stat-num counter" data-target="300">0</div><div class="hero-stat-label">Brides Glammed</div></div>
+        <div class="hero-stat"><div class="hero-stat-num counter" data-target="5">0</div><div class="hero-stat-label">Areas Covered</div></div>
+        <div class="hero-stat"><div class="hero-stat-num counter" data-target="15">0</div><div class="hero-stat-label">Services</div></div>
       </div>
     </div>
     <div class="hero-visual">
       <div class="hero-decor"></div>
       <div class="hero-decor-2"></div>
       <div class="hero-image-frame">
+        <div class="hero-locations">
+          <strong><i data-lucide="map-pin" width="13" height="13"></i> We Cover</strong>
+          <span>Marawi City, Iligan, CDO, Lanao del Sur &amp; Lanao del Norte</span>
+        </div>
         <div class="hero-image-placeholder">
           <i data-lucide="image" width="48" height="48" style="opacity:0.3"></i>
-          <p>Hero portrait photo<br/>Replace with artist image</p>
+          <p>Haneeya bridal portrait<br/>Replace with real photo from<br/>her Facebook / Instagram</p>
         </div>
       </div>
       <div class="hero-badge">
-        <div class="hero-badge-icon">
-          <i data-lucide="star" width="18" height="18" fill="white" color="white"></i>
-        </div>
-        <div class="hero-badge-text">
-          <strong>5.0 Rating</strong>
-          <span>Based on 200+ reviews</span>
-        </div>
+        <div class="hero-badge-icon"><i data-lucide="sparkles" width="18" height="18" color="white"></i></div>
+        <div class="hero-badge-text"><strong>Limited Slots Only</strong><span>Book early to secure your date</span></div>
       </div>
     </div>
   </div>
@@ -1603,39 +502,19 @@
 
 <!-- MARQUEE -->
 <div class="marquee-section">
-  <div class="marquee-track" id="marqueeTrack">
-    <div class="marquee-item"><i data-lucide="heart" width="14" height="14"></i> Bridal Makeup</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="sparkles" width="14" height="14"></i> Graduation Glam</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="crown" width="14" height="14"></i> Debut Elegance</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="camera" width="14" height="14"></i> Editorial &amp; Photoshoot</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="star" width="14" height="14"></i> Airbrush Makeup</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="scissors" width="14" height="14"></i> Hairstyling</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="home" width="14" height="14"></i> Home Service</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="briefcase" width="14" height="14"></i> Corporate Events</div>
-    <div class="marquee-dot"></div>
-    <!-- Duplicates for seamless loop -->
-    <div class="marquee-item"><i data-lucide="heart" width="14" height="14"></i> Bridal Makeup</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="sparkles" width="14" height="14"></i> Graduation Glam</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="crown" width="14" height="14"></i> Debut Elegance</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="camera" width="14" height="14"></i> Editorial &amp; Photoshoot</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="star" width="14" height="14"></i> Airbrush Makeup</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="scissors" width="14" height="14"></i> Hairstyling</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="home" width="14" height="14"></i> Home Service</div>
-    <div class="marquee-dot"></div>
-    <div class="marquee-item"><i data-lucide="briefcase" width="14" height="14"></i> Corporate Events</div>
+  <div class="marquee-track">
+    <div class="marquee-item"><i data-lucide="heart" width="14" height="14"></i> Bridal Glam</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="gem" width="14" height="14"></i> Engagement Shoots</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="camera" width="14" height="14"></i> Prenup Photography</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="sparkle" width="14" height="14"></i> Hijab Draping</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="party-popper" width="14" height="14"></i> Event Styling</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="map-pin" width="14" height="14"></i> Marawi &middot; Iligan &middot; CDO</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="heart" width="14" height="14"></i> Bridal Glam</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="gem" width="14" height="14"></i> Engagement Shoots</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="camera" width="14" height="14"></i> Prenup Photography</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="sparkle" width="14" height="14"></i> Hijab Draping</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="party-popper" width="14" height="14"></i> Event Styling</div><div class="marquee-dot"></div>
+    <div class="marquee-item"><i data-lucide="map-pin" width="14" height="14"></i> Marawi &middot; Iligan &middot; CDO</div>
   </div>
 </div>
 
@@ -1647,171 +526,97 @@
         <div class="about-image-main">
           <div class="about-image-placeholder">
             <i data-lucide="image" width="40" height="40"></i>
-            <p style="font-size:0.8rem;margin-top:0.5rem">Artist portrait</p>
+            <p style="font-size:0.8rem;margin-top:0.5rem">Haneeya portrait<br/>(use real photo)</p>
           </div>
         </div>
-        <div class="about-image-accent">
-          <div>
-            <i data-lucide="image" width="28" height="28" style="opacity:0.3;margin-bottom:0.4rem"></i>
-            <p style="font-size:0.72rem;margin:0;opacity:0.5">Behind the scenes</p>
-          </div>
-        </div>
-        <div class="about-experience-badge">
-          <strong>8+</strong>
-          <span>Years of Artistry</span>
-        </div>
+        <div class="about-image-accent"><div><i data-lucide="image" width="26" height="26" style="opacity:0.5;margin-bottom:0.4rem"></i><p style="font-size:0.7rem;margin:0;opacity:0.7">Behind the scenes</p></div></div>
+        <div class="about-experience-badge"><strong>300+</strong><span>Brides &amp; Clients</span></div>
       </div>
       <div class="about-content fade-up">
-        <span class="section-label">About the Artist</span>
-        <h2>Where Passion Meets Precision</h2>
-        <p>Hello, I am  — a professional makeup artist based in the Philippines with over eight years of experience transforming faces and elevating confidence for life's most meaningful occasions.</p>
-        <p>My philosophy is simple: every person deserves to feel extraordinary. Whether you are walking down the aisle, accepting your diploma, or stepping into the spotlight, I craft looks that are uniquely yours — timeless, polished, and utterly breathtaking.</p>
-        <p>Trained under renowned beauty academies and certified by leading international beauty houses, I bring both technical mastery and an intuitive understanding of what makes each client radiant.</p>
+        <span class="section-label">About Haneeya</span>
+        <h2>Soft Glam, Made for Mindanao</h2>
+        <p>Hi, I'm Haneeya &mdash; known online as <strong>HMUA &middot; Makeup by Haneeya</strong>. I specialize in bridal glam, engagement and prenup looks, and elegant hijab draping for brides who want a soft, natural, and long-lasting finish.</p>
+        <p>Based in Marawi City, I take bookings across Lanao del Sur, Lanao del Norte, Iligan City, and Cagayan de Oro. My approach blends gentle contouring and clean base work with eye definition that photographs beautifully &mdash; perfect for your wedding day, engagement shoot, or any special celebration.</p>
+        <p>Slots are limited every month, so brides usually message ahead to secure their date.</p>
         <div class="about-credentials">
-          <div class="credential-card">
-            <div class="credential-icon"><i data-lucide="award" width="18" height="18"></i></div>
-            <div class="credential-text">
-              <strong>Certified MUA</strong>
-              <span>International Beauty Academy</span>
-            </div>
-          </div>
-          <div class="credential-card">
-            <div class="credential-icon"><i data-lucide="users" width="18" height="18"></i></div>
-            <div class="credential-text">
-              <strong>800+ Clients</strong>
-              <span>Across the Philippines</span>
-            </div>
-          </div>
-          <div class="credential-card">
-            <div class="credential-icon"><i data-lucide="camera" width="18" height="18"></i></div>
-            <div class="credential-text">
-              <strong>Editorial Ready</strong>
-              <span>Print &amp; Digital Publications</span>
-            </div>
-          </div>
-          <div class="credential-card">
-            <div class="credential-icon"><i data-lucide="home" width="18" height="18"></i></div>
-            <div class="credential-text">
-              <strong>Home Service</strong>
-              <span>Metro &amp; Provincial Areas</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-brands">
-          <p class="about-brands-label">Trusted Brands I Use</p>
-          <div class="about-brands-list">
-            <span class="brand-chip">MAC</span>
-            <span class="brand-chip">NARS</span>
-            <span class="brand-chip">Charlotte Tilbury</span>
-            <span class="brand-chip">Dior Beauty</span>
-            <span class="brand-chip">Make Up For Ever</span>
-            <span class="brand-chip">Rare Beauty</span>
-            <span class="brand-chip">Fenty Beauty</span>
-          </div>
+          <div class="credential-card"><div class="credential-icon"><i data-lucide="heart" width="18" height="18"></i></div><div class="credential-text"><strong>Hijab-Friendly Glam</strong><span>Modest, elegant draping styles</span></div></div>
+          <div class="credential-card"><div class="credential-icon"><i data-lucide="users" width="18" height="18"></i></div><div class="credential-text"><strong>300+ Bookings</strong><span>Across Mindanao region</span></div></div>
+          <div class="credential-card"><div class="credential-icon"><i data-lucide="map-pin" width="18" height="18"></i></div><div class="credential-text"><strong>Home Service</strong><span>Marawi, Iligan, CDO &amp; nearby</span></div></div>
+          <div class="credential-card"><div class="credential-icon"><i data-lucide="message-circle" width="18" height="18"></i></div><div class="credential-text"><strong>DM to Inquire</strong><span>Fast replies on FB &amp; Instagram</span></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TECHNIQUES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Signature Techniques</span>
+      <h2>The Haneeya Look</h2>
+      <p>A soft, breathable finish built on four signature techniques &mdash; refined for every skin tone and every hijab style.</p>
+      <div class="divider-line"><span></span><i data-lucide="sparkles" width="14" height="14"></i><span></span></div>
+    </div>
+    <div class="techniques-grid">
+      <div class="technique-card fade-up"><div class="technique-icon"><i data-lucide="droplet" width="22" height="22"></i></div><h4>Soft Base Makeup</h4><p>Lightweight, skin-like coverage that lasts all day without looking heavy.</p></div>
+      <div class="technique-card fade-up"><div class="technique-icon"><i data-lucide="scan-face" width="22" height="22"></i></div><h4>Gentle Contouring</h4><p>Natural definition that enhances your features without harsh lines.</p></div>
+      <div class="technique-card fade-up"><div class="technique-icon"><i data-lucide="eye" width="22" height="22"></i></div><h4>Elegant Eye Definition</h4><p>Soft, camera-ready eye looks designed to photograph beautifully.</p></div>
+      <div class="technique-card fade-up"><div class="technique-icon"><i data-lucide="sparkle" width="22" height="22"></i></div><h4>Flawless Hijab Draping</h4><p>Modest, elegant draping styles tailored to your face shape and event.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
-<section class="section section-alt" id="services">
+<section class="section" id="services">
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-label">What I Offer</span>
-      <h2>Artistry for Every Occasion</h2>
-      <p>From intimate celebrations to grand events, each service is tailored to bring out your most radiant self.</p>
+      <h2>Services for Every Occasion</h2>
+      <p>From bridal day glam to engagement shoots, each service is tailored for a soft, elegant, long-lasting finish.</p>
       <div class="divider-line"><span></span><i data-lucide="sparkles" width="14" height="14"></i><span></span></div>
     </div>
     <div class="services-grid">
       <div class="service-card featured fade-up">
         <div class="service-icon"><i data-lucide="heart" width="22" height="22"></i></div>
-        <h3>Bridal Makeup</h3>
-        <p>Flawless, all-day bridal looks designed to photograph beautifully and last from ceremony to reception. Includes trial session.</p>
-        <div class="service-meta">
-          <div class="service-price">₱5,500 <small>starting</small></div>
-          <div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 3–4 hrs</div>
-        </div>
+        <h3>Bridal Glam</h3>
+        <p>Full bridal makeup and hijab draping for your wedding day &mdash; soft base, gentle contour, and a finish that lasts the whole celebration.</p>
+        <div class="service-meta"><div class="service-price">₱3,500 <small>starting</small></div><div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 2&ndash;3 hrs</div></div>
         <a href="#booking" class="service-book-btn solid">Book This Service</a>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon"><i data-lucide="graduation-cap" width="22" height="22"></i></div>
-        <h3>Graduation Makeup</h3>
-        <p>Polished, camera-ready looks for your milestone moment. Natural elegance that photographs beautifully under any lighting.</p>
-        <div class="service-meta">
-          <div class="service-price">₱2,500 <small>starting</small></div>
-          <div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 1.5–2 hrs</div>
-        </div>
-        <a href="#booking" class="service-book-btn outline">Book This Service</a>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-icon"><i data-lucide="crown" width="22" height="22"></i></div>
-        <h3>Debut Makeup</h3>
-        <p>Princess-worthy makeup for your 18th birthday. Elegant, youthful, and designed to make every moment unforgettable.</p>
-        <div class="service-meta">
-          <div class="service-price">₱3,500 <small>starting</small></div>
-          <div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 2–3 hrs</div>
-        </div>
+        <div class="service-icon"><i data-lucide="gem" width="22" height="22"></i></div>
+        <h3>Engagement Shoot Glam</h3>
+        <p>Camera-ready makeup designed for your engagement photos &mdash; soft glam that holds up beautifully across multiple shots and outfits.</p>
+        <div class="service-meta"><div class="service-price">₱2,200 <small>starting</small></div><div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 1.5&ndash;2 hrs</div></div>
         <a href="#booking" class="service-book-btn outline">Book This Service</a>
       </div>
       <div class="service-card fade-up">
         <div class="service-icon"><i data-lucide="camera" width="22" height="22"></i></div>
-        <h3>Prenuptial Makeup</h3>
-        <p>Editorial-quality looks for your pre-wedding photoshoot. Designed to translate beautifully across multiple outfit changes.</p>
-        <div class="service-meta">
-          <div class="service-price">₱3,800 <small>starting</small></div>
-          <div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 2–3 hrs</div>
-        </div>
+        <h3>Prenup Photography Glam</h3>
+        <p>Soft, elegant looks built to photograph well across different lighting setups and outfit changes during your prenup session.</p>
+        <div class="service-meta"><div class="service-price">₱2,500 <small>starting</small></div><div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 2&ndash;2.5 hrs</div></div>
         <a href="#booking" class="service-book-btn outline">Book This Service</a>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon"><i data-lucide="sparkles" width="22" height="22"></i></div>
-        <h3>Airbrush Makeup</h3>
-        <p>Ultra-lightweight, HD airbrush application for a seamless, long-lasting finish. Ideal for photoshoots and special occasions.</p>
-        <div class="service-meta">
-          <div class="service-price">₱4,000 <small>starting</small></div>
-          <div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 2–2.5 hrs</div>
-        </div>
+        <div class="service-icon"><i data-lucide="sparkle" width="22" height="22"></i></div>
+        <h3>Hijab Draping Only</h3>
+        <p>Standalone hijab styling and draping service for brides or guests who already have their makeup done elsewhere.</p>
+        <div class="service-meta"><div class="service-price">₱800 <small>starting</small></div><div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 30&ndash;45 mins</div></div>
         <a href="#booking" class="service-book-btn outline">Book This Service</a>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon"><i data-lucide="scissors" width="22" height="22"></i></div>
-        <h3>Hairstyling</h3>
-        <p>Professional hair styling to complement your makeup look. Updos, waves, and custom styles for any event or occasion.</p>
-        <div class="service-meta">
-          <div class="service-price">₱1,500 <small>add-on</small></div>
-          <div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 1–1.5 hrs</div>
-        </div>
-        <a href="#booking" class="service-book-btn outline">Book This Service</a>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-icon"><i data-lucide="briefcase" width="22" height="22"></i></div>
-        <h3>Corporate &amp; Events</h3>
-        <p>Professional, polished makeup for corporate headshots, company events, and professional video productions.</p>
-        <div class="service-meta">
-          <div class="service-price">₱2,200 <small>starting</small></div>
-          <div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 1–1.5 hrs</div>
-        </div>
-        <a href="#booking" class="service-book-btn outline">Book This Service</a>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-icon"><i data-lucide="birthday-cake" width="22" height="22"></i></div>
-        <h3>Birthday Glam</h3>
-        <p>Make your birthday celebration extra special with a personalized glam look that reflects your personality and style.</p>
-        <div class="service-meta">
-          <div class="service-price">₱2,000 <small>starting</small></div>
-          <div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 1–2 hrs</div>
-        </div>
+        <div class="service-icon"><i data-lucide="party-popper" width="22" height="22"></i></div>
+        <h3>Event Styling</h3>
+        <p>Full glam and hijab styling for birthdays, graduations, and other special occasions &mdash; polished, soft, and photo-ready.</p>
+        <div class="service-meta"><div class="service-price">₱1,800 <small>starting</small></div><div class="service-duration"><i data-lucide="clock" width="13" height="13"></i> 1.5&ndash;2 hrs</div></div>
         <a href="#booking" class="service-book-btn outline">Book This Service</a>
       </div>
       <div class="service-card fade-up">
         <div class="service-icon"><i data-lucide="home" width="22" height="22"></i></div>
         <h3>Home Service</h3>
-        <p>I come to you. Enjoy premium makeup artistry in the comfort of your home, hotel, or chosen venue across the Philippines.</p>
-        <div class="service-meta">
-          <div class="service-price">+ ₱500 <small>travel fee</small></div>
-          <div class="service-duration"><i data-lucide="map-pin" width="13" height="13"></i> Metro+</div>
-        </div>
+        <p>Haneeya comes to you &mdash; available across Marawi City, Iligan, CDO, Lanao del Sur and Lanao del Norte. Travel fee may apply.</p>
+        <div class="service-meta"><div class="service-price">+ ₱300&ndash;500 <small>travel fee</small></div><div class="service-duration"><i data-lucide="map-pin" width="13" height="13"></i> Mindanao</div></div>
         <a href="#booking" class="service-book-btn outline">Book This Service</a>
       </div>
     </div>
@@ -1819,46 +624,37 @@
 </section>
 
 <!-- PACKAGES -->
-<section class="section" id="packages">
+<section class="section section-alt" id="packages">
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-label">Packages</span>
       <h2>Curated for Every Celebration</h2>
-      <p>Thoughtfully designed packages to give you the most complete, stress-free beauty experience.</p>
+      <p>Thoughtfully bundled packages so you get the complete look without juggling separate bookings.</p>
       <div class="divider-line"><span></span><i data-lucide="sparkles" width="14" height="14"></i><span></span></div>
     </div>
     <div class="packages-grid">
       <div class="package-card fade-up">
-        <div class="package-name">Essential Package</div>
-        <div class="package-subtitle">Perfect for graduations and birthdays</div>
-        <div class="package-price-wrap">
-          <div class="package-price"><sup>₱</sup>2,500</div>
-          <div class="package-price-note">One-time flat rate</div>
-        </div>
+        <div class="package-name">Simple Glam</div>
+        <div class="package-subtitle">Great for events &amp; everyday occasions</div>
+        <div class="package-price-wrap"><div class="package-price"><sup>₱</sup>1,800</div><div class="package-price-note">One-time flat rate</div></div>
         <ul class="package-features">
-          <li><i data-lucide="check" width="15" height="15"></i> Full face makeup application</li>
-          <li><i data-lucide="check" width="15" height="15"></i> False lashes included</li>
-          <li><i data-lucide="check" width="15" height="15"></i> Premium products used</li>
-          <li><i data-lucide="check" width="15" height="15"></i> Up to 2 hour duration</li>
-          <li class="disabled"><i data-lucide="minus" width="15" height="15"></i> Hairstyling</li>
-          <li class="disabled"><i data-lucide="minus" width="15" height="15"></i> Touch-up kit</li>
+          <li><i data-lucide="check" width="15" height="15"></i> Soft base makeup</li>
+          <li><i data-lucide="check" width="15" height="15"></i> Gentle contour &amp; eye look</li>
+          <li><i data-lucide="check" width="15" height="15"></i> Basic hijab draping</li>
           <li class="disabled"><i data-lucide="minus" width="15" height="15"></i> Home service</li>
+          <li class="disabled"><i data-lucide="minus" width="15" height="15"></i> Touch-up kit</li>
         </ul>
         <a href="#booking" class="package-btn outlined">Book This Package</a>
       </div>
       <div class="package-card popular fade-up">
-        <div class="package-popular-tag">Most Popular</div>
-        <div class="package-name">Bridal Premium</div>
+        <div class="package-popular-tag">Most Booked</div>
+        <div class="package-name">Bridal Full Glam</div>
         <div class="package-subtitle">Complete bridal beauty experience</div>
-        <div class="package-price-wrap">
-          <div class="package-price"><sup>₱</sup>8,500</div>
-          <div class="package-price-note">Trial + wedding day included</div>
-        </div>
+        <div class="package-price-wrap"><div class="package-price"><sup>₱</sup>5,000</div><div class="package-price-note">Bridal day, home service included</div></div>
         <ul class="package-features">
-          <li><i data-lucide="check" width="15" height="15"></i> Bridal trial session</li>
-          <li><i data-lucide="check" width="15" height="15"></i> Wedding day makeup</li>
-          <li><i data-lucide="check" width="15" height="15"></i> Professional hairstyling</li>
-          <li><i data-lucide="check" width="15" height="15"></i> Premium false lashes</li>
+          <li><i data-lucide="check" width="15" height="15"></i> Full bridal makeup</li>
+          <li><i data-lucide="check" width="15" height="15"></i> Flawless hijab draping</li>
+          <li><i data-lucide="check" width="15" height="15"></i> Gentle contour &amp; eye definition</li>
           <li><i data-lucide="check" width="15" height="15"></i> Touch-up kit included</li>
           <li><i data-lucide="check" width="15" height="15"></i> Home / venue service</li>
           <li><i data-lucide="check" width="15" height="15"></i> Priority booking slot</li>
@@ -1866,20 +662,15 @@
         <a href="#booking" class="package-btn filled">Book This Package</a>
       </div>
       <div class="package-card fade-up">
-        <div class="package-name">Debut Royale</div>
-        <div class="package-subtitle">Complete 18th birthday experience</div>
-        <div class="package-price-wrap">
-          <div class="package-price"><sup>₱</sup>6,500</div>
-          <div class="package-price-note">Includes entourage add-on options</div>
-        </div>
+        <div class="package-name">Engagement &amp; Prenup</div>
+        <div class="package-subtitle">For photoshoot-ready glam</div>
+        <div class="package-price-wrap"><div class="package-price"><sup>₱</sup>2,800</div><div class="package-price-note">Includes touch-up during shoot</div></div>
         <ul class="package-features">
-          <li><i data-lucide="check" width="15" height="15"></i> Debut bride full glam</li>
-          <li><i data-lucide="check" width="15" height="15"></i> Professional hairstyling</li>
-          <li><i data-lucide="check" width="15" height="15"></i> Premium false lashes</li>
-          <li><i data-lucide="check" width="15" height="15"></i> Touch-up kit for the night</li>
+          <li><i data-lucide="check" width="15" height="15"></i> Soft glam makeup</li>
+          <li><i data-lucide="check" width="15" height="15"></i> Hijab draping for photos</li>
+          <li><i data-lucide="check" width="15" height="15"></i> On-site touch-up</li>
           <li><i data-lucide="check" width="15" height="15"></i> Home / venue service</li>
-          <li class="disabled"><i data-lucide="minus" width="15" height="15"></i> Entourage makeup (add-on)</li>
-          <li class="disabled"><i data-lucide="minus" width="15" height="15"></i> Airbrush upgrade (add-on)</li>
+          <li class="disabled"><i data-lucide="minus" width="15" height="15"></i> Bridal trial session</li>
         </ul>
         <a href="#booking" class="package-btn outlined">Book This Package</a>
       </div>
@@ -1888,353 +679,202 @@
 </section>
 
 <!-- PORTFOLIO -->
-<section class="section section-alt" id="portfolio">
+<section class="section" id="portfolio">
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-label">Portfolio</span>
-      <h2>A Gallery of Transformations</h2>
-      <p>Each look tells a story. Browse my work across weddings, debuts, editorials, and more.</p>
+      <h2>Real Looks, Real Brides</h2>
+      <p>A gallery of Haneeya's work across bridal, engagement, and event makeup.</p>
       <div class="divider-line"><span></span><i data-lucide="sparkles" width="14" height="14"></i><span></span></div>
     </div>
+    <p class="portfolio-note fade-up"><i data-lucide="info" width="14" height="14" style="vertical-align:-2px;color:var(--rose-gold)"></i>
+      These tiles are placeholders. Replace each one with real photos saved from
+      <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" target="_blank" rel="noopener" style="color:var(--rose-gold);text-decoration:none;font-weight:500">her Facebook</a> or
+      <a href="https://www.instagram.com/haneeyaofficial/" target="_blank" rel="noopener" style="color:var(--rose-gold);text-decoration:none;font-weight:500">Instagram</a> &mdash; image files cannot be pulled automatically from social platforms.
+    </p>
     <div class="portfolio-filters fade-up">
       <button class="filter-btn active" data-filter="all">All Work</button>
       <button class="filter-btn" data-filter="bridal">Bridal</button>
-      <button class="filter-btn" data-filter="graduation">Graduation</button>
-      <button class="filter-btn" data-filter="debut">Debut</button>
-      <button class="filter-btn" data-filter="editorial">Editorial</button>
-      <button class="filter-btn" data-filter="corporate">Corporate</button>
-      <button class="filter-btn" data-filter="before-after">Before &amp; After</button>
+      <button class="filter-btn" data-filter="engagement">Engagement</button>
+      <button class="filter-btn" data-filter="prenup">Prenup</button>
+      <button class="filter-btn" data-filter="hijab">Hijab Draping</button>
+      <button class="filter-btn" data-filter="event">Event</button>
     </div>
     <div class="portfolio-grid fade-up">
-      <div class="portfolio-item" style="background: linear-gradient(145deg,#E8C4BC,#F0D5D0);">
-        <div class="portfolio-thumb">
-          <div><i data-lucide="image" width="32" height="32" style="opacity:0.3"></i><br/><small>Bridal Look</small></div>
-        </div>
-        <div class="portfolio-overlay">
-          <div class="portfolio-caption"><strong>Angelic Bridal</strong><span>Bridal Makeup</span></div>
-        </div>
-      </div>
-      <div class="portfolio-item" style="background: linear-gradient(145deg,#F2EDE6,#E8E0D5);">
-        <div class="portfolio-thumb">
-          <div><i data-lucide="image" width="28" height="28" style="opacity:0.3"></i><br/><small>Graduation</small></div>
-        </div>
-        <div class="portfolio-overlay">
-          <div class="portfolio-caption"><strong>Soft Graduation</strong><span>Graduation Makeup</span></div>
-        </div>
-      </div>
-      <div class="portfolio-item" style="background: linear-gradient(145deg,#D9C5C0,#E8D5D0);">
-        <div class="portfolio-thumb">
-          <div><i data-lucide="image" width="28" height="28" style="opacity:0.3"></i><br/><small>Debut</small></div>
-        </div>
-        <div class="portfolio-overlay">
-          <div class="portfolio-caption"><strong>Princess Debut</strong><span>Debut Makeup</span></div>
-        </div>
-      </div>
-      <div class="portfolio-item" style="background: linear-gradient(145deg,#2C1F1A,#3D2822);">
-        <div class="portfolio-thumb">
-          <div style="color:rgba(255,255,255,0.3)"><i data-lucide="image" width="28" height="28" style="opacity:0.3"></i><br/><small>Editorial</small></div>
-        </div>
-        <div class="portfolio-overlay">
-          <div class="portfolio-caption"><strong>Dark Editorial</strong><span>Fashion Makeup</span></div>
-        </div>
-      </div>
-      <div class="portfolio-item" style="background: linear-gradient(145deg,#F8E8E0,#F0D5C8);">
-        <div class="portfolio-thumb">
-          <div><i data-lucide="image" width="32" height="32" style="opacity:0.3"></i><br/><small>Prenuptial</small></div>
-        </div>
-        <div class="portfolio-overlay">
-          <div class="portfolio-caption"><strong>Garden Prenup</strong><span>Prenuptial Makeup</span></div>
-        </div>
-      </div>
-      <div class="portfolio-item" style="background: linear-gradient(145deg,#E5D5E8,#D5C0D8);">
-        <div class="portfolio-thumb">
-          <div><i data-lucide="image" width="28" height="28" style="opacity:0.3"></i><br/><small>Birthday</small></div>
-        </div>
-        <div class="portfolio-overlay">
-          <div class="portfolio-caption"><strong>Birthday Glam</strong><span>Special Occasion</span></div>
-        </div>
-      </div>
-      <div class="portfolio-item" style="background: linear-gradient(145deg,#E8E5D5,#D8D5C0);">
-        <div class="portfolio-thumb">
-          <div><i data-lucide="image" width="28" height="28" style="opacity:0.3"></i><br/><small>Corporate</small></div>
-        </div>
-        <div class="portfolio-overlay">
-          <div class="portfolio-caption"><strong>Corporate Polish</strong><span>Corporate Makeup</span></div>
-        </div>
-      </div>
-      <div class="portfolio-item" style="background: linear-gradient(145deg,#F0C8C0,#E8B8B0);">
-        <div class="portfolio-thumb">
-          <div><i data-lucide="image" width="28" height="28" style="opacity:0.3"></i><br/><small>Airbrush</small></div>
-        </div>
-        <div class="portfolio-overlay">
-          <div class="portfolio-caption"><strong>Airbrush Perfection</strong><span>Airbrush Makeup</span></div>
-        </div>
-      </div>
+      <div class="portfolio-item" style="background:linear-gradient(145deg,#1F5C4D,#143F35)"><div class="portfolio-thumb" style="color:rgba(255,255,255,0.4)"><div><i data-lucide="image" width="32" height="32" style="opacity:0.5"></i><br/><small>Bridal Look</small></div></div><div class="portfolio-overlay"><div class="portfolio-caption"><strong>Marawi Bridal Glam</strong><span>Bridal Makeup</span></div></div></div>
+      <div class="portfolio-item" style="background:linear-gradient(145deg,#E8C4BC,#F0D5D0)"><div class="portfolio-thumb"><div><i data-lucide="image" width="28" height="28" style="opacity:0.4"></i><br/><small>Engagement</small></div></div><div class="portfolio-overlay"><div class="portfolio-caption"><strong>Soft Engagement Glam</strong><span>Engagement Shoot</span></div></div></div>
+      <div class="portfolio-item" style="background:linear-gradient(145deg,#D9C5C0,#E8D5D0)"><div class="portfolio-thumb"><div><i data-lucide="image" width="28" height="28" style="opacity:0.4"></i><br/><small>Prenup</small></div></div><div class="portfolio-overlay"><div class="portfolio-caption"><strong>Lakeside Prenup</strong><span>Prenup Photography</span></div></div></div>
+      <div class="portfolio-item" style="background:linear-gradient(145deg,#2F7A66,#1F5C4D)"><div class="portfolio-thumb" style="color:rgba(255,255,255,0.4)"><div><i data-lucide="image" width="28" height="28" style="opacity:0.5"></i><br/><small>Hijab Draping</small></div></div><div class="portfolio-overlay"><div class="portfolio-caption"><strong>Elegant Drape Style</strong><span>Hijab Draping</span></div></div></div>
+      <div class="portfolio-item" style="background:linear-gradient(145deg,#143F35,#1F5C4D)"><div class="portfolio-thumb" style="color:rgba(255,255,255,0.4)"><div><i data-lucide="image" width="32" height="32" style="opacity:0.5"></i><br/><small>Bridal Look 2</small></div></div><div class="portfolio-overlay"><div class="portfolio-caption"><strong>Iligan Wedding Glam</strong><span>Bridal Makeup</span></div></div></div>
+      <div class="portfolio-item" style="background:linear-gradient(145deg,#F0C8C0,#E8B8B0)"><div class="portfolio-thumb"><div><i data-lucide="image" width="28" height="28" style="opacity:0.4"></i><br/><small>Event</small></div></div><div class="portfolio-overlay"><div class="portfolio-caption"><strong>Birthday Soft Glam</strong><span>Event Styling</span></div></div></div>
+      <div class="portfolio-item" style="background:linear-gradient(145deg,#E5D5E8,#D5C0D8)"><div class="portfolio-thumb"><div><i data-lucide="image" width="28" height="28" style="opacity:0.4"></i><br/><small>Engagement 2</small></div></div><div class="portfolio-overlay"><div class="portfolio-caption"><strong>CDO Engagement</strong><span>Engagement Shoot</span></div></div></div>
+      <div class="portfolio-item" style="background:linear-gradient(145deg,#A8926A,#C4A882)"><div class="portfolio-thumb"><div><i data-lucide="image" width="28" height="28" style="opacity:0.4"></i><br/><small>Hijab Draping 2</small></div></div><div class="portfolio-overlay"><div class="portfolio-caption"><strong>Formal Drape Look</strong><span>Hijab Draping</span></div></div></div>
     </div>
     <div class="portfolio-cta fade-up">
-      <a href="pages/portfolio.html" class="btn btn-outline">
-        <i data-lucide="grid" width="16" height="16"></i>
-        View Full Portfolio
-      </a>
+      <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="facebook" width="16" height="16"></i> See More on Facebook</a>
+      <a href="https://www.instagram.com/haneeyaofficial/" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="instagram" width="16" height="16"></i> See More on Instagram</a>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section" id="testimonials">
+<section class="section section-alt" id="testimonials">
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-label">Client Stories</span>
-      <h2>Words from the Women I Have Served</h2>
-      <p>Real reviews from real clients who trusted me with their most important moments.</p>
+      <h2>Words from Haneeya's Brides</h2>
+      <p>Sample reviews shown below &mdash; swap these with real client comments from her Facebook and Instagram pages.</p>
       <div class="divider-line"><span></span><i data-lucide="sparkles" width="14" height="14"></i><span></span></div>
     </div>
     <div class="testimonials-grid">
       <div class="testimonial-card fade-up">
-        <div class="testimonial-stars">
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-        </div>
-        <p class="testimonial-text">"Camille made me feel like the most beautiful version of myself on my wedding day. My makeup lasted all 12 hours without a single touch-up needed. I cried happy tears and it did not budge at all."</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-avatar">A</div>
-          <div class="testimonial-info">
-            <strong>Andrea Santos</strong>
-            <span>Quezon City</span>
-          </div>
-          <span class="testimonial-event-tag">Bridal</span>
-        </div>
+        <div class="testimonial-stars"><i data-lucide="star" width="14" height="14" fill="currentColor"></i><i data-lucide="star" width="14" height="14" fill="currentColor"></i><i data-lucide="star" width="14" height="14" fill="currentColor"></i><i data-lucide="star" width="14" height="14" fill="currentColor"></i><i data-lucide="star" width="14" height="14" fill="currentColor"></i></div>
+        <p class="testimonial-text">"Sample review &mdash; replace with a real comment from Haneeya's page. Her hijab draping was so elegant and the makeup lasted all day during my wedding."</p>
+        <div class="testimonial-footer"><div class="testimonial-avatar">A</div><div class="testimonial-info"><strong>Sample Bride</strong><span>Marawi City</span></div><span class="testimonial-event-tag">Bridal</span></div>
       </div>
       <div class="testimonial-card featured fade-up">
-        <div class="testimonial-stars">
-          <i data-lucide="star" width="14" height="14" fill="#C9907A"></i>
-          <i data-lucide="star" width="14" height="14" fill="#C9907A"></i>
-          <i data-lucide="star" width="14" height="14" fill="#C9907A"></i>
-          <i data-lucide="star" width="14" height="14" fill="#C9907A"></i>
-          <i data-lucide="star" width="14" height="14" fill="#C9907A"></i>
-        </div>
-        <p class="testimonial-text">"I was nervous about getting my debut makeup done but Camille made the experience so comfortable and fun. The result was absolutely stunning — I felt like a princess. Every photo looked flawless."</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-avatar">M</div>
-          <div class="testimonial-info">
-            <strong>Maria Cristina Reyes</strong>
-            <span>Makati City</span>
-          </div>
-          <span class="testimonial-event-tag">Debut</span>
-        </div>
+        <div class="testimonial-stars"><i data-lucide="star" width="14" height="14" fill="#C9907A"></i><i data-lucide="star" width="14" height="14" fill="#C9907A"></i><i data-lucide="star" width="14" height="14" fill="#C9907A"></i><i data-lucide="star" width="14" height="14" fill="#C9907A"></i><i data-lucide="star" width="14" height="14" fill="#C9907A"></i></div>
+        <p class="testimonial-text">"Sample review &mdash; replace with a real comment. The engagement glam Haneeya did looked so natural and soft in our photos. Very professional and kind."</p>
+        <div class="testimonial-footer"><div class="testimonial-avatar">S</div><div class="testimonial-info"><strong>Sample Client</strong><span>Iligan City</span></div><span class="testimonial-event-tag">Engagement</span></div>
       </div>
       <div class="testimonial-card fade-up">
-        <div class="testimonial-stars">
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-          <i data-lucide="star" width="14" height="14" fill="currentColor"></i>
-        </div>
-        <p class="testimonial-text">"Professional, punctual, and incredibly talented. Camille captured exactly the look I wanted for my graduation photos. Natural but polished — exactly what I needed for a milestone this significant."</p>
-        <div class="testimonial-footer">
-          <div class="testimonial-avatar">K</div>
-          <div class="testimonial-info">
-            <strong>Katherine Lim</strong>
-            <span>Cebu City</span>
-          </div>
-          <span class="testimonial-event-tag">Graduation</span>
-        </div>
+        <div class="testimonial-stars"><i data-lucide="star" width="14" height="14" fill="currentColor"></i><i data-lucide="star" width="14" height="14" fill="currentColor"></i><i data-lucide="star" width="14" height="14" fill="currentColor"></i><i data-lucide="star" width="14" height="14" fill="currentColor"></i><i data-lucide="star" width="14" height="14" fill="currentColor"></i></div>
+        <p class="testimonial-text">"Sample review &mdash; replace with a real comment from her page. She came to our home in CDO and the whole process felt relaxed and on time."</p>
+        <div class="testimonial-footer"><div class="testimonial-avatar">K</div><div class="testimonial-info"><strong>Sample Client</strong><span>Cagayan de Oro</span></div><span class="testimonial-event-tag">Prenup</span></div>
       </div>
     </div>
+    <p class="testimonial-source-note">Pull real reviews and comments from <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" target="_blank" rel="noopener">Haneeya's Facebook</a> or <a href="https://www.instagram.com/haneeyaofficial/" target="_blank" rel="noopener">Instagram</a> to replace these samples.</p>
   </div>
 </section>
 
-<!-- BOOKING FORM -->
+<!-- BOOKING -->
 <section class="section booking-section" id="booking">
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-label">Reservations</span>
       <h2 style="color:var(--white)">Reserve Your Date</h2>
-      <p>Slots are limited each month. Secure your appointment with a reservation fee to hold your date.</p>
+      <p>Check the calendar below for open dates, then fill out the form. Limited slots each month.</p>
     </div>
     <div class="booking-grid">
       <div class="booking-info fade-up">
-        <h3>How It Works</h3>
-        <p>Booking is simple. Fill out the form, and I will reach out within 24 hours to confirm your appointment details.</p>
-        <div class="booking-steps">
-          <div class="booking-step">
-            <div class="step-num">1</div>
-            <div class="step-content">
-              <strong>Complete the Form</strong>
-              <span>Fill in your event details and preferred date</span>
+        <h3>Availability Calendar</h3>
+        <p>Green dates are vacant. Rose-colored dates are already booked. Tap a vacant date to auto-fill it in the form.</p>
+        <div class="calendar-card">
+          <div class="calendar-head">
+            <strong id="calMonthLabel">Loading...</strong>
+            <div class="calendar-nav">
+              <button onclick="changeMonth(-1)"><i data-lucide="chevron-left" width="15" height="15"></i></button>
+              <button onclick="changeMonth(1)"><i data-lucide="chevron-right" width="15" height="15"></i></button>
             </div>
           </div>
-          <div class="booking-step">
-            <div class="step-num">2</div>
-            <div class="step-content">
-              <strong>Receive Confirmation</strong>
-              <span>I will message you within 24 hours to confirm</span>
-            </div>
-          </div>
-          <div class="booking-step">
-            <div class="step-num">3</div>
-            <div class="step-content">
-              <strong>Pay Reservation Fee</strong>
-              <span>A small fee secures your date and package</span>
-            </div>
-          </div>
-          <div class="booking-step">
-            <div class="step-num">4</div>
-            <div class="step-content">
-              <strong>Enjoy Your Day</strong>
-              <span>Relax while I take care of your look</span>
-            </div>
+          <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+          <div class="calendar-grid" id="calendarGrid"></div>
+          <div class="calendar-legend">
+            <div class="calendar-legend-item"><span class="legend-dot vacant"></span> Vacant</div>
+            <div class="calendar-legend-item"><span class="legend-dot booked"></span> Booked</div>
           </div>
         </div>
         <div class="booking-payment-info">
           <div class="payment-title">Accepted Payment Methods</div>
           <div class="payment-methods">
-            <div class="payment-method"><i data-lucide="smartphone" width="15" height="15"></i> GCash &mdash; 09XX XXX XXXX</div>
-            <div class="payment-method"><i data-lucide="credit-card" width="15" height="15"></i> BDO / BPI Bank Transfer</div>
-            <div class="payment-method"><i data-lucide="wallet" width="15" height="15"></i> PayMaya / Maya</div>
-            <div class="payment-method"><i data-lucide="banknote" width="15" height="15"></i> Cash (on site)</div>
+            <div class="payment-method"><i data-lucide="smartphone" width="15" height="15"></i> GCash &mdash; details sent upon confirmation</div>
+            <div class="payment-method"><i data-lucide="credit-card" width="15" height="15"></i> Bank Transfer (BDO / BPI)</div>
+            <div class="payment-method"><i data-lucide="banknote" width="15" height="15"></i> Cash (on-site, by arrangement)</div>
           </div>
         </div>
+        <a href="admin.html" class="admin-callout">
+          <div class="admin-callout-icon"><i data-lucide="lock" width="16" height="16"></i></div>
+          <div class="admin-callout-text"><strong>Haneeya's Booking Dashboard</strong><span>View all submitted bookings here (admin access)</span></div>
+        </a>
       </div>
       <div class="fade-up">
-        <div class="booking-form" id="bookingForm">
+        <div class="booking-form" id="bookingFormCard">
           <form id="appointmentForm" novalidate>
             <div class="form-row">
-              <div class="form-group">
-                <label>Full Name <span>*</span></label>
-                <input type="text" class="form-input" placeholder="Your full name" required />
-              </div>
-              <div class="form-group">
-                <label>Phone Number <span>*</span></label>
-                <input type="tel" class="form-input" placeholder="09XX XXX XXXX" required />
-              </div>
+              <div class="form-group"><label>Full Name <span>*</span></label><input type="text" class="form-input" id="f-name" placeholder="Your full name" required /></div>
+              <div class="form-group"><label>Phone Number <span>*</span></label><input type="tel" class="form-input" id="f-phone" placeholder="09XX XXX XXXX" required /></div>
             </div>
             <div class="form-row">
-              <div class="form-group">
-                <label>Email Address <span>*</span></label>
-                <input type="email" class="form-input" placeholder="you@email.com" required />
-              </div>
-              <div class="form-group">
-                <label>Facebook Profile</label>
-                <input type="text" class="form-input" placeholder="Facebook name or link" />
-              </div>
+              <div class="form-group"><label>Facebook Name</label><input type="text" class="form-input" id="f-fb" placeholder="Facebook name or profile link" /></div>
+              <div class="form-group"><label>Instagram Handle</label><input type="text" class="form-input" id="f-ig" placeholder="@yourhandle" /></div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label>Event Type <span>*</span></label>
-                <select class="form-select" required>
+                <select class="form-select" id="f-event" required>
                   <option value="">Select event type</option>
                   <option>Bridal / Wedding</option>
-                  <option>Prenuptial</option>
-                  <option>Graduation</option>
-                  <option>Debut / 18th Birthday</option>
-                  <option>Birthday</option>
-                  <option>Corporate Event</option>
-                  <option>Photoshoot / Editorial</option>
-                  <option>Engagement</option>
+                  <option>Engagement Shoot</option>
+                  <option>Prenup Photography</option>
+                  <option>Event Styling</option>
+                  <option>Hijab Draping Only</option>
                   <option>Other</option>
                 </select>
               </div>
               <div class="form-group">
-                <label>Package <span>*</span></label>
-                <select class="form-select" required>
+                <label>Package</label>
+                <select class="form-select" id="f-package">
                   <option value="">Select a package</option>
-                  <option>Essential Package ₱2,500</option>
-                  <option>Bridal Premium ₱8,500</option>
-                  <option>Debut Royale ₱6,500</option>
+                  <option>Simple Glam ₱1,800</option>
+                  <option>Bridal Full Glam ₱5,000</option>
+                  <option>Engagement &amp; Prenup ₱2,800</option>
                   <option>Custom / To be discussed</option>
                 </select>
               </div>
             </div>
             <div class="form-row">
-              <div class="form-group">
-                <label>Event Date <span>*</span></label>
-                <input type="date" class="form-input" required />
-              </div>
+              <div class="form-group"><label>Event Date <span>*</span></label><input type="date" class="form-input" id="f-date" required /></div>
               <div class="form-group">
                 <label>Preferred Time <span>*</span></label>
-                <select class="form-select" required>
+                <select class="form-select" id="f-time" required>
                   <option value="">Select time slot</option>
-                  <option>Morning (6:00 AM – 10:00 AM)</option>
-                  <option>Mid-Morning (10:00 AM – 12:00 PM)</option>
-                  <option>Afternoon (1:00 PM – 5:00 PM)</option>
+                  <option>Early Morning (5:00 AM &ndash; 8:00 AM)</option>
+                  <option>Morning (8:00 AM &ndash; 11:00 AM)</option>
+                  <option>Afternoon (1:00 PM &ndash; 5:00 PM)</option>
                   <option>Evening (6:00 PM onwards)</option>
                 </select>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label>Province</label>
-                <input type="text" class="form-input" placeholder="Province" />
+                <label>Area / City <span>*</span></label>
+                <select class="form-select" id="f-area" required>
+                  <option value="">Select your area</option>
+                  <option>Marawi City</option>
+                  <option>Iligan City</option>
+                  <option>Cagayan de Oro</option>
+                  <option>Lanao del Sur (other municipality)</option>
+                  <option>Lanao del Norte (other municipality)</option>
+                  <option>Other (within Mindanao)</option>
+                </select>
               </div>
-              <div class="form-group">
-                <label>City / Municipality</label>
-                <input type="text" class="form-input" placeholder="City or municipality" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Venue / Address</label>
-              <input type="text" class="form-input" placeholder="Venue name and address" />
+              <div class="form-group"><label>Venue / Address</label><input type="text" class="form-input" id="f-venue" placeholder="Venue name and address" /></div>
             </div>
             <div class="form-group">
               <label>Additional Services</label>
               <div class="form-checkboxes">
-                <label class="form-checkbox">
-                  <input type="checkbox" /> <span>Hairstyling (+₱1,500)</span>
-                </label>
-                <label class="form-checkbox">
-                  <input type="checkbox" /> <span>Airbrush Upgrade (+₱1,000)</span>
-                </label>
-                <label class="form-checkbox">
-                  <input type="checkbox" /> <span>Home Service (+₱500)</span>
-                </label>
-                <label class="form-checkbox">
-                  <input type="checkbox" /> <span>Touch-Up Kit (+₱300)</span>
-                </label>
-                <label class="form-checkbox">
-                  <input type="checkbox" /> <span>Extra Person (+₱2,000)</span>
-                </label>
-                <label class="form-checkbox">
-                  <input type="checkbox" /> <span>Entourage Makeup</span>
-                </label>
+                <label class="form-checkbox"><input type="checkbox" value="Hijab Draping Add-on (+₱500)" /> <span>Hijab Draping Add-on (+₱500)</span></label>
+                <label class="form-checkbox"><input type="checkbox" value="Touch-Up Kit (+₱300)" /> <span>Touch-Up Kit (+₱300)</span></label>
+                <label class="form-checkbox"><input type="checkbox" value="Home Service (+₱300-500)" /> <span>Home Service (+₱300&ndash;500)</span></label>
+                <label class="form-checkbox"><input type="checkbox" value="Extra Person (+₱1,000)" /> <span>Extra Person (+₱1,000)</span></label>
               </div>
             </div>
-            <div class="form-group">
-              <label>Message / Special Requests</label>
-              <textarea class="form-textarea" placeholder="Any allergies, skin concerns, inspiration looks, or special requests..."></textarea>
-            </div>
-            <div class="form-group">
-              <label>Reference Photos</label>
-              <div class="form-upload" onclick="document.getElementById('photoUpload').click()">
-                <i data-lucide="image" width="28" height="28"></i>
-                <p><strong>Click to upload</strong> or drag and drop</p>
-                <p>PNG, JPG up to 10MB each</p>
-                <input type="file" id="photoUpload" accept="image/*" multiple style="display:none" />
-              </div>
-            </div>
-            <label class="form-terms">
-              <input type="checkbox" required id="termsCheck" />
-              <span>I have read and agree to the <a href="#">Booking Terms</a> and <a href="#">Cancellation Policy</a>.</span>
-            </label>
-            <button type="submit" class="form-submit">
-              <i data-lucide="calendar-check" width="16" height="16"></i>
-              &nbsp; Book My Appointment
-            </button>
+            <div class="form-group"><label>Message / Special Requests</label><textarea class="form-textarea" id="f-message" placeholder="Any allergies, skin concerns, inspiration looks, or other notes..."></textarea></div>
+            <label class="form-terms"><input type="checkbox" required id="termsCheck" /><span>I have read and agree to the <a href="#">Booking Terms</a> and <a href="#">Cancellation Policy</a>.</span></label>
+            <button type="submit" class="form-submit"><i data-lucide="calendar-check" width="16" height="16"></i> &nbsp; Book My Appointment</button>
+            <p class="form-note"><i data-lucide="shield-check" width="13" height="13"></i> Your booking is saved and visible to Haneeya in her dashboard.</p>
           </form>
         </div>
-        <div class="booking-success" id="bookingSuccess" style="background:var(--white);border-radius:var(--radius-xl);padding:3rem;">
-          <div class="success-icon">
-            <i data-lucide="check" width="36" height="36"></i>
-          </div>
+        <div class="booking-success" id="bookingSuccess">
+          <div class="success-icon"><i data-lucide="check" width="36" height="36"></i></div>
           <h3 style="margin-bottom:0.75rem">Booking Request Sent</h3>
-          <p>Thank you! I will get back to you within 24 hours to confirm your appointment details.</p>
-          <div class="booking-id" id="bookingIdDisplay">BK-2025-0001</div>
+          <p>Salamat! Haneeya will message you on Facebook or Instagram to confirm the details.</p>
+          <div class="booking-id" id="bookingIdDisplay">HN-2025-0001</div>
           <p style="font-size:0.82rem;color:var(--charcoal-light)">Please screenshot your booking ID for reference.</p>
-          <a href="#" onclick="resetBooking()" style="display:inline-block;margin-top:1.5rem;" class="btn btn-primary">Make Another Booking</a>
+          <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+            <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" target="_blank" rel="noopener" class="btn btn-primary"><i data-lucide="facebook" width="15" height="15"></i> Message on Facebook</a>
+            <a href="#" onclick="resetBooking();return false;" class="btn btn-outline">Make Another Booking</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2247,59 +887,15 @@
     <div class="section-header fade-up">
       <span class="section-label">FAQ</span>
       <h2>Frequently Asked Questions</h2>
-      <p>Everything you need to know before booking your appointment.</p>
+      <p>Everything to know before booking with Haneeya.</p>
       <div class="divider-line"><span></span><i data-lucide="sparkles" width="14" height="14"></i><span></span></div>
     </div>
     <div class="faq-list fade-up">
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          How do I reserve my appointment?
-          <span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span>
-        </button>
-        <div class="faq-answer"><p>Fill out the booking form above with your event details. I will contact you within 24 hours to confirm your appointment. A reservation fee is then required to officially secure your date.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          How much is the reservation fee?
-          <span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span>
-        </button>
-        <div class="faq-answer"><p>The reservation fee is ₱500 to ₱1,500 depending on the package. This is non-refundable but is deducted from your total balance. It ensures your date is locked in and no other client can take it.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          Do you offer home service and do you travel outside Metro Manila?
-          <span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span>
-        </button>
-        <div class="faq-answer"><p>Yes. I offer home service with a travel fee starting at ₱500 for Metro Manila areas. For provincial bookings, travel and accommodation fees apply and are discussed upon confirmation. I cover most major cities nationwide.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          Can I cancel or reschedule my appointment?
-          <span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span>
-        </button>
-        <div class="faq-answer"><p>Rescheduling is allowed up to 7 days before your event, subject to availability. Cancellations made within 48 hours of the event forfeit the reservation fee. Please communicate with me as early as possible.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          How long does the makeup application take?
-          <span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span>
-        </button>
-        <div class="faq-answer"><p>Standard makeup takes 1.5 to 2 hours. Bridal full glam takes 2.5 to 4 hours including hairstyling. Please plan accordingly and communicate your call time so I can schedule the proper window.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          What products do you use and are they safe for sensitive skin?
-          <span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span>
-        </button>
-        <div class="faq-answer"><p>I use only professional-grade products from brands such as MAC, NARS, Charlotte Tilbury, and Make Up For Ever. Please disclose any skin allergies or sensitivities in your booking form so I can adjust my product selection accordingly.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          Do you do makeup for the wedding entourage?
-          <span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span>
-        </button>
-        <div class="faq-answer"><p>Yes. Entourage makeup is available as an add-on service starting at ₱2,000 per additional person. For large parties, please inquire early as I may need to coordinate additional artists to cover the team.</p></div>
-      </div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How do I reserve my appointment?<span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span></button><div class="faq-answer"><p>Check the availability calendar above, fill out the booking form, then message Haneeya on Facebook or Instagram using the chat button to confirm and arrange the reservation fee.</p></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do you travel outside Marawi City?<span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span></button><div class="faq-answer"><p>Yes. Haneeya regularly takes bookings in Iligan City, Cagayan de Oro, and across Lanao del Sur and Lanao del Norte. A small travel fee may apply depending on distance.</p></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do you do hijab draping only, without makeup?<span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span></button><div class="faq-answer"><p>Yes, hijab draping is available as a standalone service for brides or guests who already had their makeup done elsewhere.</p></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Can I cancel or move my date?<span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span></button><div class="faq-answer"><p>Rescheduling is possible if requested early, subject to availability. Please message Haneeya directly on Facebook or Instagram as soon as possible if your plans change.</p></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How long does the makeup and draping take?<span class="faq-icon"><i data-lucide="plus" width="14" height="14"></i></span></button><div class="faq-answer"><p>Standard glam takes about 1.5 to 2 hours. Full bridal glam with hijab draping usually takes 2.5 to 3 hours. Please plan your event timeline accordingly.</p></div></div>
     </div>
   </div>
 </section>
@@ -2309,87 +905,50 @@
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-label">Get in Touch</span>
-      <h2>Let's Talk About Your Event</h2>
-      <p>Have questions? Reach out through any of the channels below. I typically respond within 24 hours.</p>
+      <h2>Message Haneeya Directly</h2>
+      <p>For fastest replies, DM through Facebook or Instagram. Booking form submissions are also reviewed regularly.</p>
       <div class="divider-line"><span></span><i data-lucide="sparkles" width="14" height="14"></i><span></span></div>
     </div>
     <div class="contact-grid">
       <div class="contact-info fade-up">
         <h3>Contact Information</h3>
-        <p>Based in Manila but serving clients across the Philippines. Available for both studio and home service appointments.</p>
+        <p>Based in Marawi City, taking bookings throughout the Mindanao region.</p>
         <div class="contact-items">
-          <div class="contact-item">
-            <div class="contact-item-icon"><i data-lucide="map-pin" width="18" height="18"></i></div>
-            <div class="contact-item-text">
-              <strong>Studio Location</strong>
-              <span>Makati City, Metro Manila, Philippines</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i data-lucide="phone" width="18" height="18"></i></div>
-            <div class="contact-item-text">
-              <strong>Phone / Viber / WhatsApp</strong>
-              <span>+63 9XX XXX XXXX</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i data-lucide="mail" width="18" height="18"></i></div>
-            <div class="contact-item-text">
-              <strong>Email</strong>
-              <span>hello@camillelaurent.ph</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i data-lucide="clock" width="18" height="18"></i></div>
-            <div class="contact-item-text">
-              <strong>Operating Hours</strong>
-              <span>Monday – Sunday, 7:00 AM – 9:00 PM</span>
-            </div>
-          </div>
+          <div class="contact-item"><div class="contact-item-icon"><i data-lucide="map-pin" width="18" height="18"></i></div><div class="contact-item-text"><strong>Based In</strong><span>Marawi City, Lanao del Sur</span></div></div>
+          <div class="contact-item"><div class="contact-item-icon"><i data-lucide="clock" width="18" height="18"></i></div><div class="contact-item-text"><strong>Reply Time</strong><span>Usually within 24 hours via DM</span></div></div>
+          <div class="contact-item"><div class="contact-item-icon"><i data-lucide="message-circle" width="18" height="18"></i></div><div class="contact-item-text"><strong>Preferred Contact</strong><span>Facebook Messenger or Instagram DM</span></div></div>
         </div>
         <div class="contact-socials">
-          <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" class="Facebook"><i data-lucide="facebook" width="15" height="15"></i> Facebook</a>
-          <a href="https://www.instagram.com/haneeyaofficial/" class="Instagram"><i data-lucide="instagram" width="15" height="15"></i> Instagram</a>
-          <a href="https://www.tiktok.com/@haneeyaofficial" class="TikTok"><i data-lucide="video" width="15" height="15"></i> TikTok</a>
-          <a href="#" class="social-link"><i data-lucide="message-circle" width="15" height="15"></i> Messenger</a>
+          <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" target="_blank" rel="noopener" class="social-link fb"><i data-lucide="facebook" width="15" height="15"></i> Facebook</a>
+          <a href="https://www.instagram.com/haneeyaofficial/" target="_blank" rel="noopener" class="social-link ig"><i data-lucide="instagram" width="15" height="15"></i> Instagram</a>
+          <a href="https://www.tiktok.com/@haneeyaofficial" target="_blank" rel="noopener" class="social-link tt"><i data-lucide="video" width="15" height="15"></i> TikTok</a>
         </div>
-        <div class="contact-map">
-          <div>
-            <i data-lucide="map" width="32" height="32" style="opacity:0.3;margin-bottom:0.75rem"></i>
-            <p style="margin:0;font-size:0.82rem">Google Maps embed goes here.<br/>Replace with your actual embed code.</p>
+        <div class="coverage-card">
+          <strong><i data-lucide="map" width="16" height="16" style="color:var(--rose-gold)"></i> Service Coverage</strong>
+          <div class="coverage-list">
+            <span class="coverage-chip">Marawi City</span>
+            <span class="coverage-chip">Iligan City</span>
+            <span class="coverage-chip">Cagayan de Oro</span>
+            <span class="coverage-chip">Lanao del Sur</span>
+            <span class="coverage-chip">Lanao del Norte</span>
           </div>
         </div>
       </div>
-      <div class="fade-up" style="display:flex;flex-direction:column;gap:1.5rem;">
-        <div style="background:var(--ivory);border:1px solid var(--border);border-radius:var(--radius-xl);padding:2.5rem;">
-          <h3 style="margin-bottom:1rem">Send a Message</h3>
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" class="form-input" placeholder="Full name" />
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" class="form-input" placeholder="you@email.com" />
-          </div>
-          <div class="form-group">
-            <label>Subject</label>
-            <input type="text" class="form-input" placeholder="What is your inquiry about?" />
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea class="form-textarea" placeholder="Tell me about your event or ask any questions..." style="min-height:130px"></textarea>
-          </div>
-          <button class="form-submit" style="margin-top:0.5rem">
-            Send Message &nbsp;<i data-lucide="send" width="15" height="15"></i>
-          </button>
+      <div class="fade-up" style="display:flex;flex-direction:column;gap:1.5rem">
+        <div style="background:linear-gradient(135deg,#1877F2,#0d5cd1);border-radius:var(--radius-xl);padding:2rem;color:white">
+          <h3 style="color:white;margin-bottom:0.4rem;display:flex;align-items:center;gap:0.6rem"><i data-lucide="facebook" width="20" height="20"></i> Facebook</h3>
+          <p style="color:rgba(255,255,255,0.85);margin-bottom:1.25rem;font-size:0.9rem">Send a message directly to Haneeya's official page for booking inquiries and quotations.</p>
+          <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" target="_blank" rel="noopener" class="btn" style="background:rgba(255,255,255,0.18);color:white;border:1.5px solid rgba(255,255,255,0.4)">Message on Facebook</a>
         </div>
-        <div style="background:linear-gradient(135deg,var(--rose-gold),var(--gold));border-radius:var(--radius-xl);padding:2rem;color:white;">
-          <h3 style="color:white;margin-bottom:0.6rem">Ready to Book?</h3>
-          <p style="color:rgba(255,255,255,0.8);margin-bottom:1.5rem;font-size:0.92rem">Don't wait — dates fill up quickly especially during peak season. Secure your slot today.</p>
-          <a href="#booking" class="btn" style="background:rgba(255,255,255,0.2);color:white;border:1.5px solid rgba(255,255,255,0.4);backdrop-filter:blur(8px);">
-            <i data-lucide="calendar" width="16" height="16"></i>
-            Book Now
-          </a>
+        <div style="background:linear-gradient(135deg,#C13584,#833AB4);border-radius:var(--radius-xl);padding:2rem;color:white">
+          <h3 style="color:white;margin-bottom:0.4rem;display:flex;align-items:center;gap:0.6rem"><i data-lucide="instagram" width="20" height="20"></i> Instagram</h3>
+          <p style="color:rgba(255,255,255,0.85);margin-bottom:1.25rem;font-size:0.9rem">Follow @haneeyaofficial for portfolio updates, and DM for quick inquiries.</p>
+          <a href="https://www.instagram.com/haneeyaofficial/" target="_blank" rel="noopener" class="btn" style="background:rgba(255,255,255,0.18);color:white;border:1.5px solid rgba(255,255,255,0.4)">Message on Instagram</a>
+        </div>
+        <div style="background:linear-gradient(135deg,#1F5C4D,#143F35);border-radius:var(--radius-xl);padding:2rem;color:white">
+          <h3 style="color:white;margin-bottom:0.4rem;display:flex;align-items:center;gap:0.6rem"><i data-lucide="video" width="20" height="20"></i> TikTok</h3>
+          <p style="color:rgba(255,255,255,0.85);margin-bottom:1.25rem;font-size:0.9rem">Watch glam transformations, tutorials, and behind-the-scenes bridal content.</p>
+          <a href="https://www.tiktok.com/@haneeyaofficial" target="_blank" rel="noopener" class="btn" style="background:rgba(255,255,255,0.18);color:white;border:1.5px solid rgba(255,255,255,0.4)">Follow on TikTok</a>
         </div>
       </div>
     </div>
@@ -2401,157 +960,224 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="footer-logo"> Haneeya </span>
-        <p>Professional makeup artist dedicated to creating timeless beauty for weddings, debuts, graduations, and every milestone that deserves to be remembered.</p>
+        <span class="footer-logo"><div class="nav-logo-mark" style="width:32px;height:32px;font-size:0.85rem">H</div> Haneeya</span>
+        <p>HMUA &middot; Makeup by Haneeya. Bridal glam, engagement shoots, prenup photography, and event styling &mdash; based in Marawi City, serving Lanao del Sur, Lanao del Norte, Iligan, and Cagayan de Oro.</p>
         <div class="footer-socials">
-          <a href="#" class="footer-social-icon"><i data-lucide="facebook" width="15" height="15"></i></a>
-          <a href="#" class="footer-social-icon"><i data-lucide="instagram" width="15" height="15"></i></a>
-          <a href="#" class="footer-social-icon"><i data-lucide="video" width="15" height="15"></i></a>
-          <a href="#" class="footer-social-icon"><i data-lucide="youtube" width="15" height="15"></i></a>
+          <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" target="_blank" rel="noopener" class="footer-social-icon"><i data-lucide="facebook" width="15" height="15"></i></a>
+          <a href="https://www.instagram.com/haneeyaofficial/" target="_blank" rel="noopener" class="footer-social-icon"><i data-lucide="instagram" width="15" height="15"></i></a>
+          <a href="https://www.tiktok.com/@haneeyaofficial" target="_blank" rel="noopener" class="footer-social-icon"><i data-lucide="video" width="15" height="15"></i></a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul class="footer-links">
-          <li><a href="#services">Bridal Makeup</a></li>
-          <li><a href="#services">Graduation Makeup</a></li>
-          <li><a href="#services">Debut Makeup</a></li>
-          <li><a href="#services">Airbrush Makeup</a></li>
-          <li><a href="#services">Hairstyling</a></li>
-          <li><a href="#services">Home Service</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#packages">Packages</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul class="footer-links">
-          <li><a href="#">Makati, Metro Manila</a></li>
-          <li><a href="#">+63 9XX XXX XXXX</a></li>
-          <li><a href="#">hello@camillelaurent.ph</a></li>
-          <li><a href="#">Mon–Sun, 7AM–9PM</a></li>
-          <li><a href="#booking">Book Appointment</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="#services">Bridal Glam</a></li><li><a href="#services">Engagement Shoot</a></li><li><a href="#services">Prenup Photography</a></li><li><a href="#services">Hijab Draping</a></li><li><a href="#services">Event Styling</a></li></ul></div>
+      <div class="footer-col"><h4>Navigate</h4><ul class="footer-links"><li><a href="#about">About</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#packages">Packages</a></li><li><a href="#testimonials">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="admin.html">Booking Dashboard</a></li></ul></div>
+      <div class="footer-col"><h4>Coverage</h4><ul class="footer-links"><li><a href="#contact">Marawi City</a></li><li><a href="#contact">Iligan City</a></li><li><a href="#contact">Cagayan de Oro</a></li><li><a href="#contact">Lanao del Sur</a></li><li><a href="#contact">Lanao del Norte</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Haneeya MUA. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cancellation Policy</a>
-      </div>
+      <p>&copy; 2025 Haneeya &middot; HMUA Official. All rights reserved.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Booking Terms</a><a href="#">Cancellation Policy</a></div>
     </div>
   </div>
 </footer>
 
-<!-- FLOATING CTA -->
-<div class="floating-cta">
-  <a href="#booking" class="floating-cta-btn">
-    <i data-lucide="calendar" width="17" height="17"></i>
-    <span>Book Now</span>
-  </a>
+<!-- CHAT WIDGET -->
+<div class="chat-widget">
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-panel-head"><strong>Chat with Haneeya</strong><span>Usually replies within 24 hours</span></div>
+    <div class="chat-panel-body">
+      <a href="https://www.facebook.com/people/Haneeya-Official/61573060834072/" target="_blank" rel="noopener" class="chat-option fb">
+        <div class="chat-option-icon" style="background:#1877F2"><i data-lucide="facebook" width="16" height="16"></i></div>
+        <div class="chat-option-text"><strong>Message on Facebook</strong><span>HMUA &middot; Makeup by Haneeya</span></div>
+      </a>
+      <a href="https://www.instagram.com/haneeyaofficial/" target="_blank" rel="noopener" class="chat-option ig">
+        <div class="chat-option-icon" style="background:#C13584"><i data-lucide="instagram" width="16" height="16"></i></div>
+        <div class="chat-option-text"><strong>Message on Instagram</strong><span>@haneeyaofficial</span></div>
+      </a>
+      <a href="https://www.tiktok.com/@haneeyaofficial" target="_blank" rel="noopener" class="chat-option tt">
+        <div class="chat-option-icon" style="background:#000"><i data-lucide="video" width="16" height="16"></i></div>
+        <div class="chat-option-text"><strong>Follow on TikTok</strong><span>@haneeyaofficial</span></div>
+      </a>
+    </div>
+  </div>
+  <button class="chat-bubble" onclick="toggleChat()" aria-label="Chat with Haneeya">
+    <i data-lucide="message-circle" width="26" height="26"></i>
+    <span class="chat-bubble-ping"></span>
+  </button>
 </div>
 
 <script>
-  // Initialize Lucide icons
+lucide.createIcons();
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); lucide.createIcons(); }
+function toggleChat(){ document.getElementById('chatPanel').classList.toggle('open'); }
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+function animateCounter(el){
+  const target = parseInt(el.dataset.target);
+  const plus = target >= 100 ? '+' : '';
+  let current = 0;
+  const step = target / 60;
+  const timer = setInterval(() => {
+    current = Math.min(current + step, target);
+    el.textContent = Math.floor(current) + plus;
+    if (current >= target) clearInterval(timer);
+  }, 16);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting){ animateCounter(e.target); counterObserver.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
   lucide.createIcons();
+}
 
-  // Navbar scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
   });
+});
 
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-    lucide.createIcons();
+/* ===== BRIX-CODE BOOKING + CALENDAR SYSTEM ===== */
+const STORAGE_KEY = 'brixcode_haneeya_bookings';
+const BLOCKED_KEY = 'brixcode_haneeya_blocked_dates';
+
+function getBookings(){
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+  catch(e){ return []; }
+}
+function saveBookings(list){ localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); }
+function getBlockedDates(){
+  try { return JSON.parse(localStorage.getItem(BLOCKED_KEY)) || []; }
+  catch(e){ return []; }
+}
+
+function nextBookingId(){
+  const bookings = getBookings();
+  const year = new Date().getFullYear();
+  const num = String(bookings.length + 1).padStart(4, '0');
+  return `HN-${year}-${num}`;
+}
+
+/* Calendar rendering */
+let calDate = new Date();
+function renderCalendar(){
+  const grid = document.getElementById('calendarGrid');
+  const label = document.getElementById('calMonthLabel');
+  const year = calDate.getFullYear();
+  const month = calDate.getMonth();
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  label.textContent = `${monthNames[month]} ${year}`;
+
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const today = new Date(); today.setHours(0,0,0,0);
+
+  const bookings = getBookings();
+  const blocked = getBlockedDates();
+  const bookedDates = new Set(bookings.map(b => b.date));
+  const blockedDates = new Set(blocked);
+
+  grid.innerHTML = '';
+  for (let i = 0; i < firstDay; i++) {
+    grid.innerHTML += `<div class="cal-day"></div>`;
   }
+  for (let d = 1; d <= daysInMonth; d++) {
+    const dateObj = new Date(year, month, d);
+    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const isPast = dateObj < today;
+    const isToday = dateObj.getTime() === today.getTime();
+    let classes = 'cal-day';
+    if (!isPast) classes += ' active';
+    if (isToday) classes += ' today';
 
-  // Scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  // Counters
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target);
-    const plus = target >= 100 ? '+' : '';
-    let current = 0;
-    const step = target / 60;
-    const timer = setInterval(() => {
-      current = Math.min(current + step, target);
-      el.textContent = Math.floor(current) + plus;
-      if (current >= target) clearInterval(timer);
-    }, 16);
-  }
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        counterObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
-
-  // FAQ
-  function toggleFaq(btn) {
-    const item = btn.parentElement;
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-    if (!isOpen) {
-      item.classList.add('open');
-      lucide.createIcons();
+    if (bookedDates.has(dateStr) || blockedDates.has(dateStr)) {
+      classes += ' booked';
+      grid.innerHTML += `<div class="${classes}" title="Already booked">${d}</div>`;
+    } else if (!isPast) {
+      classes += ' vacant';
+      grid.innerHTML += `<div class="${classes}" title="Vacant - click to select" onclick="selectCalDate('${dateStr}')">${d}</div>`;
+    } else {
+      grid.innerHTML += `<div class="${classes}">${d}</div>`;
     }
+  }
+}
+function changeMonth(delta){
+  calDate.setMonth(calDate.getMonth() + delta);
+  renderCalendar();
+}
+function selectCalDate(dateStr){
+  document.getElementById('f-date').value = dateStr;
+  document.getElementById('bookingFormCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+renderCalendar();
+
+/* Booking form submit */
+const appointmentForm = document.getElementById('appointmentForm');
+if (appointmentForm) {
+  appointmentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const terms = document.getElementById('termsCheck');
+    if (!terms.checked) { alert('Please agree to the booking terms to proceed.'); return; }
+
+    const dateVal = document.getElementById('f-date').value;
+    const bookings = getBookings();
+    if (bookings.some(b => b.date === dateVal)) {
+      alert('Sorry, that date is already booked. Please choose a vacant date from the calendar.');
+      return;
+    }
+
+    const addons = Array.from(document.querySelectorAll('.form-checkboxes input:checked')).map(c => c.value);
+    const bookingId = nextBookingId();
+
+    const newBooking = {
+      id: bookingId,
+      name: document.getElementById('f-name').value,
+      phone: document.getElementById('f-phone').value,
+      facebook: document.getElementById('f-fb').value,
+      instagram: document.getElementById('f-ig').value,
+      eventType: document.getElementById('f-event').value,
+      package: document.getElementById('f-package').value,
+      date: dateVal,
+      time: document.getElementById('f-time').value,
+      area: document.getElementById('f-area').value,
+      venue: document.getElementById('f-venue').value,
+      addons: addons,
+      message: document.getElementById('f-message').value,
+      status: 'Pending Confirmation',
+      submittedAt: new Date().toISOString()
+    };
+
+    bookings.push(newBooking);
+    saveBookings(bookings);
+
+    document.getElementById('bookingIdDisplay').textContent = bookingId;
+    document.getElementById('bookingFormCard').style.display = 'none';
+    document.getElementById('bookingSuccess').classList.add('show');
+    renderCalendar();
     lucide.createIcons();
-  }
-
-  // Portfolio filters
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
   });
+}
 
-  // Booking form
-  const appointmentForm = document.getElementById('appointmentForm');
-  if (appointmentForm) {
-    appointmentForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const terms = document.getElementById('termsCheck');
-      if (!terms.checked) {
-        alert('Please agree to the booking terms to proceed.');
-        return;
-      }
-      const bookingId = 'BK-2025-' + String(Math.floor(Math.random() * 9000) + 1000);
-      document.getElementById('bookingIdDisplay').textContent = bookingId;
-      document.getElementById('bookingForm').style.display = 'none';
-      document.getElementById('bookingSuccess').classList.add('show');
-      lucide.createIcons();
-    });
-  }
-
-  function resetBooking() {
-    document.getElementById('bookingForm').style.display = 'block';
-    document.getElementById('bookingSuccess').classList.remove('show');
-    document.getElementById('appointmentForm').reset();
-  }
+function resetBooking(){
+  document.getElementById('bookingFormCard').style.display = 'block';
+  document.getElementById('bookingSuccess').classList.remove('show');
+  document.getElementById('appointmentForm').reset();
+}
 </script>
 </body>
 </html>
