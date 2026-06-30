@@ -187,6 +187,7 @@ lucide.createIcons();
 const ACCESS_CODE = 'haneeya2025';
 const STORAGE_KEY = 'brixcode_haneeya_bookings';
 const SESSION_KEY = 'brixcode_haneeya_admin_session';
+let currentFilter = 'all';
 
 function tryLogin(){
   const val = document.getElementById('passInput').value;
@@ -219,7 +220,6 @@ function getBookings(){
 }
 function saveBookings(list){ localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); }
 
-let currentFilter = 'all';
 function setFilter(status, btn){
   currentFilter = status;
   document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
