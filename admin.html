@@ -56,6 +56,14 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600}
 .stat-card .label{font-size:0.78rem;color:var(--charcoal-light);margin-top:0.4rem}
 .stat-card.rose .num{color:var(--rose-gold)}
 
+.income-card{background:linear-gradient(135deg,var(--emerald),var(--emerald-dark));border-radius:var(--radius-md);padding:1.5rem;margin-bottom:1.5rem;color:white}
+.income-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.income-card-head h3{color:white}
+.income-total{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;white-space:nowrap}
+.income-breakdown{display:flex;gap:0.6rem;flex-wrap:wrap}
+.income-chip{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:0.4rem 0.9rem;font-size:0.78rem}
+.income-empty{font-size:0.82rem;opacity:0.7}
+
 .controls-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;gap:1rem;flex-wrap:wrap}
 .search-box{position:relative;flex-grow:1;max-width:340px}
 .search-box input{width:100%;padding:0.65rem 1rem 0.65rem 2.4rem;border:1.5px solid var(--border);border-radius:100px;font-size:0.86rem;outline:none}
@@ -138,6 +146,17 @@ tbody tr:hover{background:rgba(201,144,122,0.03)}
       <div class="stat-card rose"><div class="num" id="statPending">0</div><div class="label">Pending Confirmation</div></div>
       <div class="stat-card"><div class="num" id="statConfirmed">0</div><div class="label">Confirmed</div></div>
       <div class="stat-card"><div class="num" id="statMonth">0</div><div class="label">This Month</div></div>
+    </div>
+
+    <div class="income-card" id="incomeCard">
+      <div class="income-card-head">
+        <div>
+          <h3 style="font-size:1.05rem;margin-bottom:0.2rem">Monthly Income Summary</h3>
+          <p style="font-size:0.78rem;color:var(--charcoal-light);margin:0">Estimated from Confirmed bookings' package prices, current calendar month. Add-ons and custom packages are not included automatically.</p>
+        </div>
+        <div class="income-total" id="incomeTotal">₱0</div>
+      </div>
+      <div class="income-breakdown" id="incomeBreakdown"></div>
     </div>
 
     <div class="controls-row">
@@ -242,6 +261,43 @@ function renderStats(){
     const d = new Date(b.date);
     return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
   }).length;
+  renderIncomeSummary(bookings, now);
+}
+
+function extractPriceFromPackage(packageStr){
+  if (!packageStr) return 0;
+  const match = packageStr.match(/₱\s?([\d,]+)/);
+  if (!match) return 0;
+  return parseInt(match[1].replace(/,/g, ''), 10) || 0;
+}
+
+function renderIncomeSummary(bookings, now){
+  const monthBookings = bookings.filter(b => {
+    if (b.status !== 'Confirmed') return false;
+    const d = new Date(b.date);
+    return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+  });
+
+  const breakdown = {};
+  let total = 0;
+  monthBookings.forEach(b => {
+    const price = extractPriceFromPackage(b.package);
+    total += price;
+    const label = b.package && b.package.split('₱')[0].trim() || 'Custom / Unspecified';
+    breakdown[label] = (breakdown[label] || 0) + price;
+  });
+
+  document.getElementById('incomeTotal').textContent = '₱' + total.toLocaleString();
+
+  const breakdownEl = document.getElementById('incomeBreakdown');
+  const entries = Object.entries(breakdown);
+  if (entries.length === 0) {
+    breakdownEl.innerHTML = '<span class="income-empty">No confirmed bookings with priced packages this month yet.</span>';
+    return;
+  }
+  breakdownEl.innerHTML = entries.map(([label, amt]) =>
+    `<span class="income-chip">${label}: ₱${amt.toLocaleString()}</span>`
+  ).join('');
 }
 
 function badgeClass(status){
